@@ -1,0 +1,31 @@
+header
+{
+    height: 50px;
+    width: 100%;
+    background-color: rgba(0,0,0,0.7);
+    position: fixed;
+    z-index: 5;
+}
+
+header img
+{
+    width: 55px;
+    height: 25px;
+    margin: 20px;
+    margin-top: 10px;
+}
+
+header img:hover
+{
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 480px)
+{
+    header img
+    {
+        width: 45px;
+        height: 20px;
+        margin-top: 15px;
+    }
+}

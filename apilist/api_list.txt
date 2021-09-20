@@ -1,0 +1,285 @@
+/signup
+{
+    "fullName": "Sara Das",
+    "emailId": "sara475@gmail.com",
+    "mobileNo": "7845963210",
+    "userPassword": "$2a$10$0ndUZuzxg3TwPJNQQAdOpOzK7U0lyAxYIGatyRF8uZx1w0LYHAgWi",
+    "userGender": "Female",
+    "userAge": 27,
+    "userOccupation": "Teacher"
+}
+{
+    "fullName": "Abhinav Roy",
+    "emailId": "roy123@gmail.com",
+    "mobileNo": "7845963219",
+    "userPassword": "$2a$12$b61NeHRDqoL5oWCMe7uxRu1dKk08scEgwh9c5q.IJf.tRkCn67JV.",
+    "userGender": "male",
+    "userAge": 28,
+    "userOccupation": "Engineer"
+}
+{
+    "fullName": "Barun majhi",
+    "emailId": "majhi123@gmail.com",
+    "mobileNo": "7845963214",
+    "userPassword": "$2a$12$iBGPt3FG5gnQiiD8.s9m6OZuI.RNtc1uLXjYePJx/hReQDnqHI5q6",
+    "userGender": "male",
+    "userAge": 24,
+    "userOccupation": "Engineer"
+}
+{
+    "fullName": "udita chaterjee",
+    "emailId": "chaterjee123@gmail.com",
+    "mobileNo": "8845963214",
+    "userPassword": "$2a$12$yVs2Ec0QIStmDLO6778AsuLHoNNPtHfsVCOXiJvLyhjWZ246QGJhi",
+    "userGender": "Female",
+    "userAge": 24,
+    "userOccupation": "Doctor"
+}
+{
+    "fullName": "Abhishek Chattaraj",
+    "emailId": "chattaraj123@gmail.com",
+    "mobileNo": "8545963214",
+    "userPassword": "$2a$12$yVs2Ec0QIStmDLO6778AsuLHoNNPtHfsVCOXiJvLyhjWZ246QGJhi",
+    "userGender": "male",
+    "userAge": 24,
+    "userOccupation": "Engineer"
+}
+{
+    "fullName": "Sounak Majumdar",
+    "emailId": "majumdar123@gmail.com",
+    "mobileNo": "8595963214",
+    "userPassword": "$2a$12$CYYIJ8QhqS.ruBq1jknT0OmeJSwmX/AYBZVtsabgqN3OQTWV6f66.",
+    "userGender": "male",
+    "userAge": 24,
+    "userOccupation": "Buisnessman"
+}
+{
+    "fullName": "Anindita Kar",
+    "emailId": "Kar123@gmail.com",
+    "mobileNo": "8595923214",
+    "userPassword": "$2a$12$WtLm/oDzsDyxuZOth6purOCS.Luh6u6yviUdZy3pxjLWH73C9p8By",
+    "userGender": "Female",
+    "userAge": 24,
+    "userOccupation": "Architect"
+}
+{
+    "fullName": "Ritika Banerjee",
+    "emailId": "Banerjee123@gmail.com",
+    "mobileNo": "8592923214",
+    "userPassword": "$2a$12$.wZboyZp1hm42myo3MSHCezVa/wwhpE5UilXw.r88GnjlfzPdTKC2",
+    "userGender": "Female",
+    "userAge": 24,
+    "userOccupation": "Teacher"
+}
+{
+    "fullName": "Sarthak mondol",
+    "emailId": "mondol123@gmail.com",
+    "mobileNo": "8592993214",
+    "userPassword": "$2a$12$m1kGpzlPjSz.JTNiI0alwOfEB5RDlq6Sm2NP15iP84tDTR9m4aD0G",
+    "userGender": "male",
+    "userAge": 29,
+    "userOccupation": "Engineer"
+}
+{
+    "fullName": "koushik Layek",
+    "emailId": "layek123@gmail.com",
+    "mobileNo": "9592993314",
+    "userPassword": "$2a$12$9cnNDzka0STRtkahLo4i4.Ol7.wtPnkqMWBIvb00AKaMdPh5G64ni",
+    "userGender": "male",
+    "userAge": 29,
+    "userOccupation": "Engineer"
+}
+
+
+
+
+/admin/getallusers{ //body not required}
+
+/admin/getuserdetails/{id}{ //body not required}
+
+/profile/{id}{ //body not required}
+
+/resident/updateprofile/{id}
+{
+    "fullName": "Sara Das",
+    "emailId": "sara475@gmail.com",
+    "mobileNo": "7845963210",
+    "userPassword": "",
+    "userGender": "Female",
+    "userAge": 27,
+    "userOccupation": "Teacher"
+}
+
+/admin/updateuserdata/{id}
+{
+    "fullName": "Sara Das",
+    "emailId": "sara475@gmail.com",
+    "mobileNo": "7845963210",
+    "userPassword": "",
+    "userFlatNo": "2A",
+    "blockNo": "10C",
+    "userGender": "Female",
+    "userAge": 27,
+    "userOccupation": "Teacher",
+    "userRole": "ROLE_USER,ROLE_SUPERVISIOR",
+    "active": true,
+    "verified": true
+
+}
+
+/admin/removeuser/{id}{ //body not required}
+
+
+/newchat/{id}
+{
+    "chatData": "Hello Vaibhab please take care of your Health"
+}
+
+/newchat/{uid}/{crfid}
+{
+    "chatData": "Hello Vaibhab please take care of your Health",
+}
+
+/showallchat{ //body not required}
+
+/getrefchat/{uid}
+{
+    "refChat": "Hi Sara"
+}
+
+
+
+/admin/addinvoice
+{
+    "ownerUserid": 2,
+    "totalAmount": 8000,
+    "dueDate": "10/09/21"
+}
+
+/admin/updateinvoice/{id}
+{
+    "ownerUserid": 2,
+    "totalAmount": 12000,
+    "dueDate": "15/09/21"
+}
+
+/admin/viewallinvoices{ //body not required}
+
+/admin/viewinvoicedetails/{id}{ //body not required}
+
+/admin/removeinvoice/{id}{ //body not required}
+
+
+
+/admin/sendmail
+
+{
+    "mailAddress": "skyviewproject247@gmail.com",
+    "mailHeader": "Reminder about Payment for August",
+    "mailBody": "Hi Bihan,\n Please cleare the rent for this month as well as the payments of the maids within this week \n Thanking you, \n Admin, \n SkyView24*7"
+}
+
+/admin/viewallmails{ //body not required}
+
+
+
+/resident/addpayment
+{
+    "userId": 1,
+    "totalAmount": 5000,
+    "payDate": ""
+}
+
+/admin/updatepayment/{id}
+{
+    "paymentStatus": "VERIFIED"
+}
+
+/admin/viewallpaymenthistory 
+
+/admin/viewpaymentdetails/{id}
+
+/admin/removepayment/{id}
+
+
+ this module
+
+/user/addcar/{uid}
+{
+    "userId": 2,
+    "carNo": "WB-07 7854",
+    "carBrand": "Volvo",
+    "carType": "4 wheelers"
+}
+
+/user/updatecar/{id}
+{
+    
+    "userId": 2,
+    "carNo": "WB-07 7854",
+    "carBrand": "Volvo",
+    "carType": "4 wheelers"
+}
+
+/admin/getallcars/{ownerId}{ //body not required}
+
+/user/getcardetails/{id}{ //body not required}
+
+/user/removecar/{id}{ //body not required}
+
+
+
+/user/addTicket
+{
+    "ticketRiserid": 3,
+    "ticketTopic": "Electricity Problem",
+    "ticketDetails": "Facing Electricity Fault in our block for last 2 days"
+}
+
+/supervisor/updateprofile/{id}      	
+{
+    "ticketStatus": "SOLVED" //"VIEWED"
+}
+
+
+/admin/resgisterhelper
+{
+    "helpName": "John cena",
+    "helpContact": "7741230964",
+    "helpAge": 69,
+    "helpGender" "Male",
+    "helpType": "Driver"
+}
+
+/admin/getalldailyhelps{ //body not required}
+
+
+/admin/gethelpdetails/{id}{ //body not required}
+
+
+/admin/updatedailyhelp/{id}
+
+{
+    "helpName": "desy Doe",
+    "helpContact": "7541230964",
+    "helpAge": 39,
+    "helpGender" "Male",
+    "helpType": "housemaid"
+}
+
+/admin/removedailyhelp/{id}{ //body not required}
+
+
+/user/assigntowork
+{
+    "helperId": 2,
+    "residentId": 1
+}
+
+/user/resigndailyhelp/{hid}/{rid}{ //body not required}  
+
+
+/user/getmyworkers/{id}{ //body not required}		
+
+
+/admin/getworkersplaces/{id}{ //body not required}	

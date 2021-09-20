@@ -1,0 +1,34 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body::-webkit-scrollbar
+{
+    width: 0;
+}
+
+body
+{
+    scrollbar-width: 0;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 480px)
+{
+    table tr
+    {
+        min-width: 90px;
+    }
+}

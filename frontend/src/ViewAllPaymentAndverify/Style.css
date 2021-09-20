@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.wrapperPayhistoryList
+{
+    padding-top: 10vh;
+}
+
+.wrapperPayhistoryList h2
+{
+    font-size: 30px;
+    margin-left: 50px;
+}
+.wrapperPayhistoryList .listholder
+{
+    margin-top: 50px;
+    overflow: scroll;
+    height: 80vh;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 50px;
+}
+
+.wrapperPayhistoryList .listholder::-webkit-scrollbar
+{
+    width: 0;
+}
+
+.wrapperPayhistoryList .listholder table
+{
+    width: 100%;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.wrapperPayhistoryList .listholder table thead th
+{
+    background-color: rgb(109,76,65);
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.wrapperPayhistoryList .listholder table tbody tr:nth-child(even)
+{
+    background-color: rgb(188,170,164);
+    padding: 5px;
+}
+
+.wrapperPayhistoryList .listholder table tbody tr:nth-child(odd)
+{
+    background-color: rgb(238,238,238);
+    padding: 5px;
+}
+
+.wrapperPayhistoryList .listholder table tbody tr button
+{
+    width: 90%;
+    height: 35px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    margin: 5px;
+    color: white;
+
+}
+
+.wrapperPayhistoryList .listholder table tbody tr button:hover
+{
+    cursor: pointer;
+    transition: 500ms ease-in-out;
+}
+
+.wrapperPayhistoryList .listholder table tbody tr #vewbtn
+{
+    background-color: rgb(190, 136, 10);
+}
+
+.wrapperPayhistoryList .listholder table tbody tr #vewbtn:hover
+{
+    background-color: rgb(141, 104, 18);
+}
+
+.wrapperPayhistoryList .listholder table tbody tr #dltbtn
+{
+    background-color: rgb(189, 22, 22);
+}
+
+.wrapperPayhistoryList .listholder table tbody tr #dltbtn:hover
+{
+    background-color: rgb(136, 16, 16);
+}
+
+@media only screen and (max-width: 900px)
+{
+    .wrapperPayhistoryList .listholder table tbody tr button
+    {
+        width: 120px;
+    }
+}
+
+@media only screen and (max-width: 480px)
+{
+    .wrapperPayhistoryList .listholder table tbody tr
+    {
+        font-size: 14px;
+    }
+
+    .wrapperPayhistoryList h2
+    {
+        font-size: 25px;
+        margin-left: 30px;
+    }
+
+    .wrapperPayhistoryList .listholder table tbody tr button
+    {
+        font-size: 10px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .wrapperPayhistoryList .listholder
+    {
+        margin-top: 50px;
+        overflow: scroll;
+        height: 80vh;
+        padding-bottom: 70px;
+    }
+}

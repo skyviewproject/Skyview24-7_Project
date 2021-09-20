@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.wrapperAllInvoiceList
+{
+    padding-top: 10vh;
+}
+
+.wrapperAllInvoiceList h2
+{
+    font-size: 30px;
+    margin-left: 50px;
+}
+.wrapperAllInvoiceList .listholder
+{
+    margin-top: 50px;
+    overflow: scroll;
+    height: 40vh;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.wrapperAllInvoiceList .listholder::-webkit-scrollbar
+{
+    width: 0;
+}
+
+.wrapperAllInvoiceList .listholder table
+{
+    width: 100%;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.wrapperAllInvoiceList .listholder table thead th
+{
+    background-color: rgb(109,76,65);
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.wrapperAllInvoiceList .listholder table tbody tr:nth-child(even)
+{
+    background-color: rgb(188,170,164);
+    padding: 5px;
+    height: 35px;
+}
+
+.wrapperAllInvoiceList .listholder table tbody tr:nth-child(odd)
+{
+    background-color: rgb(238,238,238);
+    padding: 5px;
+    height: 35px;
+}
+
+.wrapperAllInvoiceList .listholder table tbody tr button
+{
+    width: 90%;
+    height: 35px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    margin: 5px;
+    color: white;
+
+}
+
+.wrapperAllInvoiceList .listholder table tbody tr button:hover
+{
+    cursor: pointer;
+    transition: 500ms ease-in-out;
+}
+
+.wrapperAllInvoiceList .listholder table tbody tr #vewbtn
+{
+    background-color: rgb(190, 136, 10);
+}
+
+.wrapperAllInvoiceList .listholder table tbody tr #vewbtn:hover
+{
+    background-color: rgb(141, 104, 18);
+}
+
+.wrapperAllInvoiceList .listholder table tbody tr #dltbtn
+{
+    background-color: rgb(189, 22, 22);
+}
+
+.wrapperAllInvoiceList .listholder table tbody tr #dltbtn:hover
+{
+    background-color: rgb(136, 16, 16);
+}
+
+@media only screen and (max-width: 900px)
+{
+    .wrapperAllInvoiceList .listholder table tbody tr button
+    {
+        width: 120px;
+    }
+}
+
+@media only screen and (max-width: 480px)
+{
+    .wrapperAllInvoiceList .listholder table tbody tr
+    {
+        font-size: 14px;
+    }
+
+    .wrapperAllInvoiceList h2
+    {
+        font-size: 25px;
+        margin-left: 30px;
+    }
+
+    .wrapperAllInvoiceList .listholder table tbody tr button
+    {
+        font-size: 10px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .wrapperAllInvoiceList .listholder
+    {
+        margin-top: 50px;
+        overflow: scroll;
+        height: 80vh;
+        padding-bottom: 70px;
+    }
+
+    .wrapperAllInvoiceList .listholder
+    {
+        height: 30vh;
+    }
+}
+
+

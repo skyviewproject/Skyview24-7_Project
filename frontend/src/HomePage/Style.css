@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.wrapperhomepage
+{
+    min-height: 100vh;
+    height: auto;
+    width: 100%;
+}
+
+.wrapperhomepage .namepart
+{
+    width: 100%;
+    height: 55vh;
+    background-image: url(../Images/homebg.jpg);
+    background-position: center;
+}
+
+.wrapperhomepage .namepart .overlay
+{
+    width: 100%;
+    height: 55vh;
+    position: absolute;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.wrapperhomepage .namepart .infopart
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrapperhomepage .namepart .infopart h1
+{
+    padding-top: 15vh;
+    font-family: 'Roboto', sans-serif;
+    font-size: 55px;
+    font-weight: bolder;
+    color: white;
+    letter-spacing: 1.5px;
+}
+
+.wrapperhomepage .namepart .infopart p
+{
+    padding-top: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    color: white;
+    letter-spacing: 1.5px;
+}
+
+.wrapperhomepage .namepart .infopart button
+{
+    color: white;
+    width: 195px;
+    height: 55px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    background-color: rgb(46,125,50);
+    margin-top: 30px;
+}
+
+.wrapperhomepage .namepart .infopart button:hover
+{
+    cursor: pointer;
+    background-color: rgb(14, 83, 17);
+    transition: 500ms ease-in-out;
+}
+
+.wrapperhomepage .aboutpart
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.wrapperhomepage .aboutpart h2
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    color: rgb(92, 57, 45);
+    padding-top: 20px;
+}
+
+.wrapperhomepage .aboutpart p
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    text-align: justify;
+    line-height: 30px;
+    padding-top: 15px;
+}
+
+.wrapperhomepage .imgglrypart
+{
+    width: 100%;
+    height: 70vh;
+    background-color: rgb(141,110,99);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.wrapperhomepage .imgglrypart h2
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    color: black;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.wrapperhomepage .imgglrypart img
+{
+    height: 350px;
+    width: auto;
+    margin: 0 15px;
+}
+
+@media only screen and (max-width: 900px)
+{
+    .wrapperhomepage .namepart
+    {
+        height: 35vh;
+    }
+
+    .wrapperhomepage .namepart .overlay
+    {
+        height: 35vh;
+    }
+
+    .wrapperhomepage .namepart .infopart h1
+    {
+        padding-top: 10vh;
+        font-size: 50px;
+    }
+
+    .wrapperhomepage .namepart .infopart p
+    {
+        padding: 10px;
+    }
+
+    .wrapperhomepage .imgglrypart
+    {
+        height: 40vh;
+    }
+
+}
+
+@media only screen and (max-width: 480px)
+{
+    .wrapperhomepage .namepart
+    {
+        height: 55vh;
+    }
+
+    .wrapperhomepage .namepart .overlay
+    {
+        height: 55vh;
+    }
+
+    .wrapperhomepage .namepart .infopart h1
+    {
+        padding-top: 15vh;
+        font-size: 30px;
+    }
+
+    .wrapperhomepage .namepart .infopart p
+    {
+        padding: 20px;
+        font-size: 18px;
+    }
+
+    .wrapperhomepage .namepart .infopart button
+    {
+        color: white;
+        width: 165px;
+        height: 45px;
+        margin-top: 10px;
+    }
+
+    .wrapperhomepage .aboutpart h2
+    {
+        font-size: 19px;
+        font-weight: bold;
+    }
+
+    .wrapperhomepage .aboutpart p
+    {
+        font-size: 15px;
+        line-height: 26px;
+        padding-top: 12px;
+    }
+
+
+    .wrapperhomepage .imgglrypart
+    {
+        height: 70vh;
+    }
+
+    .wrapperhomepage .imgglrypart h2
+    {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .wrapperhomepage .imgglrypart img
+    {
+        height: 250px;
+    }
+
+}

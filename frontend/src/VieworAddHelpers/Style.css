@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.wrappervieworaddhelpers
+{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(141,110,99);
+    padding-bottom: 40px;
+}
+
+.wrappervieworaddhelpers .cardholder 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    justify-items: center;
+    padding-top: 100px;
+}
+
+.wrappervieworaddhelpers .cardholder .card
+{
+    width: 35%;
+    min-height: 350px;
+    height: auto;
+    padding-bottom: 15px;
+    background-color: rgb(121,85,72);
+    box-shadow: 2px 2px 5px black;
+    border-radius: 5px;
+}
+
+.wrappervieworaddhelpers .cardholder .card .imghldr
+{
+    background-image: url(../Images/help.jpg);
+    height: 200px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-size: cover;
+    background-position: center;
+}
+
+.wrappervieworaddhelpers .cardholder .card .txthlder
+{ 
+    padding: 20px;
+    text-align: justify;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.wrappervieworaddhelpers .cardholder .card .btnhldr
+{
+    margin: 20px;
+}
+
+.wrappervieworaddhelpers .cardholder .card .btnhldr button
+{
+    color: white;
+    width: 165px;
+    height: 45px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.wrappervieworaddhelpers .cardholder .card .btnhldr #rest
+{
+    background-color: rgb(46,125,50);
+}
+
+.wrappervieworaddhelpers .cardholder .card .btnhldr #rest:hover
+{
+    cursor: pointer;
+    background-color: rgb(14, 83, 17);
+    transition: 500ms ease-in-out;
+}
+
+.wrappervieworaddhelpers .cardholder .card .btnhldr #vwupt
+{
+    margin-left: 20px;
+    background-color: rgb(190, 136, 10);
+}
+
+.wrappervieworaddhelpers .cardholder .card .btnhldr #rest:hover
+{
+    cursor: pointer;
+    background-color: rgb(14, 83, 17);
+    transition: 500ms ease-in-out;
+}
+
+.wrappervieworaddhelpers .cardholder .card .btnhldr #vwupt:hover
+{
+    cursor: pointer;
+    background-color: rgb(141, 104, 18);
+    transition: 500ms ease-in-out;
+}
+
+@media only screen and (max-width: 900px)
+{
+    .wrappervieworaddhelpers .cardholder .card
+    {
+        width: 70%;
+        padding-top: 0;
+    }
+
+    .wrappervieworaddhelpers .cardholder .card .btnhldr button
+    {
+        width: 170px;
+    }
+}
+
+@media only screen and (max-width: 480px)
+{
+    .wrappervieworaddhelpers .cardholder .card
+    {
+        width: 90%;
+        margin-top: 30px;
+    }
+
+    .wrappervieworaddhelpers .cardholder .card .btnhldr button
+    {
+        width: 140px;
+        font-size: 14px;
+    }
+
+    .wrappervieworaddhelpers .cardholder .card .btnhldr button
+    {
+        width: 80%;
+        font-size: 12px;
+    }
+
+    .wrappervieworaddhelpers .cardholder .card .btnhldr #vwupt
+    {
+        margin-left: 0;
+        margin-top: 15px;
+    }
+
+    .wrappervieworaddhelpers
+    {
+        height: 110vh;
+    }
+}

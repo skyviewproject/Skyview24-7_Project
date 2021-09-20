@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&display=swap');
+
+nav
+{
+    width: 20%;
+    height: 100vh;
+    background-color: rgb(78,52,46);
+    position: fixed;
+    z-index: 10;
+    overflow: scroll;
+    margin-left: -100%;
+}
+
+nav::-webkit-scrollbar
+{
+    width: 0;
+}
+
+nav .lgoadcrshldr
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .lgoadcrshldr #cross
+{
+    width: 30px;
+    height: 30px;
+    margin-left: 82%;
+    margin-top: 10px;
+}
+
+nav .lgoadcrshldr #cross:hover
+{
+    cursor: pointer;
+}
+
+nav .lgoadcrshldr #logo
+{
+    width: 100px;
+    height: 100px;
+}
+
+nav ul
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    list-style: none;
+}
+
+nav ul li
+{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: 'DM Serif Display', serif;
+    font-weight: bold;
+    font-size: 23px;
+    display: block;
+    
+}
+
+nav ul li a
+{
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li:hover
+{
+    font-size: 25px;
+    margin-left: 10px;
+    font-weight: bold;
+    transition: 500ms ease-in-out;
+}
+
+nav ul li button
+{
+    width: 200px;
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 20px;
+    background-color: rgb(189, 22, 22);
+}
+
+nav ul li button:hover
+{
+    cursor: pointer;
+    background-color: rgb(136, 16, 16);
+}
+
+@media only screen and (max-width: 900px)
+{
+    nav
+    {
+        width: 40%;
+    }
+
+    nav ul li
+    {
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+}
+
+@media only screen and (max-width: 480px)
+{
+    nav
+    {
+        width: 60%;
+    }
+
+    nav .lgoadcrshldr #logo
+    {
+        width: 85px;
+        height: 85px;
+    }
+
+    nav ul
+    {
+        margin-top: 25px;
+    }
+
+    nav ul li
+    {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-size: 20px; 
+    }
+
+    nav ul li:hover
+    {
+        font-size: 22px;
+    }
+    nav ul li button
+    {
+        width: 170px;
+        font-size: 16px;
+    }
+
+}

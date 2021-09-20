@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.wrapperUpdatecar
+{
+    padding-top: 10vh;
+    height: auto;
+    min-height: 90vh;
+    padding-bottom: 30px;
+    width: 100%;
+    background-color: rgb(141,110,99);
+}
+
+.wrapperUpdatecar h2
+{
+    font-size: 30px;
+    padding-left: 40px;
+}
+
+.wrapperUpdatecar .containerform
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrapperUpdatecar .containerform .formholder
+{
+    width: 40%;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(121,85,72);
+    border-radius: 5px;
+    margin-top: 5vh;
+    box-shadow: 2px 2px 5px black;
+}
+
+.wrapperUpdatecar .containerform .formholder .imghlder
+{
+    flex: 40%;
+}
+
+.wrapperUpdatecar .containerform .formholder .imghlder img
+{
+    height: 400px;
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.wrapperUpdatecar .containerform .formholder .inpthlder
+{
+    flex: 60%;
+}
+
+.wrapperUpdatecar .containerform .formholder .inpthlder form
+{
+    margin: 20px;
+}
+
+.wrapperUpdatecar .containerform .formholder .inpthlder form label
+{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 23px;
+}
+
+.wrapperUpdatecar .containerform .formholder .inpthlder form input
+{
+    height: 30px;
+    width: 95%;
+    margin-top: 7px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    margin-bottom: 15px;
+}
+
+.wrapperUpdatecar .containerform .formholder .inpthlder form  select
+{
+    height: 30px;
+    width: 97%;
+    margin-top: 5px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    margin-bottom: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+}
+
+.wrapperUpdatecar .containerform .formholder .inpthlder form button
+{
+    margin-top: 30px;
+    width: 97%;
+    height: 45px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    background-color: rgb(46,125,50);
+    color: white;
+}
+
+.wrapperUpdatecar .containerform .formholder .inpthlder form button:hover
+{
+    cursor: pointer;
+    background-color: rgb(14, 83, 17);
+    transition: 500ms ease-in-out;
+}
+
+@media only screen and (max-width: 900px)
+{
+    .wrapperUpdatecar .containerform .formholder
+    {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 480px)
+{
+
+    .wrapperUpdatecar
+    {
+        padding-bottom: 70px;
+    }
+
+    .wrapperUpdatecar .containerform .formholder .imghlder
+    {
+        flex: 30%;
+    }
+
+    .wrapperUpdatecar .containerform .formholder .inpthlder
+    {
+        flex: 70%;
+    }
+
+    .wrapperUpdatecar .containerform .formholder
+    {
+        width: 90%;
+        flex-direction: column;
+        height: 550px;
+    }
+
+    .wrapperUpdatecar .containerform .formholder .imghlder img
+    {
+        height: 150px;
+    }
+ 
+    .wrapperUpdatecar .containerform .formholder .imghlder img
+    {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 5px;
+    }
+    
+}

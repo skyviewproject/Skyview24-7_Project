@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.wrappermakepaymentform
+{
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    padding-bottom: 50px;
+    padding-top: 7vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+
+.wrappermakepaymentform .formsholderpart
+{
+    width: 30%;
+    min-height: 70vh;
+    height: auto;
+    padding-bottom: 20px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgb(12, 95, 173);
+    display: flex;
+    flex-direction: column;
+}
+
+.wrappermakepaymentform .formsholderpart .imgholder
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrappermakepaymentform .formsholderpart .imgholder #pytmlgo
+{
+    width: 120px;
+    height: 120px;
+}
+
+.wrappermakepaymentform .formsholderpart .imgholder #paymthds
+{
+    width: 350px;
+    height: 120px;
+    margin-top: -10px;
+}
+
+.wrappermakepaymentform .formsholderpart .paymentholder .verifypaymentmethod
+{
+    margin-top: 35px;
+    display: block;
+}
+
+.wrappermakepaymentform .formsholderpart .paymentholder .verifypaymentmethod form
+{
+    margin-left: 5%;
+}
+
+.wrappermakepaymentform .formsholderpart .paymentholder .verifypaymentmethod form input
+{
+    width: 90%;
+    border: none;
+    border-bottom: 3.5px solid rgb(12, 95, 173);
+    background: transparent;
+    margin-top: 10px;
+    outline: none;
+}
+
+.wrappermakepaymentform .formsholderpart .paymentholder .verifypaymentmethod form select
+{
+    width: 90%;
+    border: none;
+    border-bottom: 3.5px solid rgb(12, 95, 173);
+    background: transparent;
+    margin-bottom: 25px;
+    margin-top: 10px;
+    outline: none;
+}
+
+.wrappermakepaymentform .formsholderpart .paymentholder .verifypaymentmethod form label
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+.wrappermakepaymentform .formsholderpart .paymentholder .verifypaymentmethod form button
+{
+    width: 90%;
+    height: 45px;
+    margin-top: 40px;
+    border: none;
+    outline: none;
+    background-color: rgb(12, 95, 173);
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.wrappermakepaymentform .formsholderpart .paymentholder .verifypaymentmethod form button:hover
+{
+    cursor: pointer;
+    font-size: 19px;
+    transition: 500ms ease-in-out;
+}
+
+.wrappermakepaymentform .formsholderpart .paymentholder .makepayment
+{
+    margin-top: 35px;
+    display: none;
+    pointer-events: none;
+}
+
+.wrappermakepaymentform .formsholderpart .paymentholder .makepayment form
+{
+    margin-left: 5%;
+}
+
+.wrappermakepaymentform .formsholderpart .paymentholder .makepayment form input
+{
+    width: 90%;
+    border: none;
+    border-bottom: 3.5px solid rgb(12, 95, 173);
+    background: transparent;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+.wrappermakepaymentform .formsholderpart .paymentholder .makepayment form select
+{
+    width: 90%;
+    border: none;
+    border-bottom: 3.5px solid rgb(12, 95, 173);
+    background: transparent;
+    margin-bottom: 25px;
+    margin-top: 10px;
+    outline: none;
+}
+
+.wrappermakepaymentform .formsholderpart .paymentholder .makepayment form label
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+.wrappermakepaymentform .formsholderpart .paymentholder .makepayment form button
+{
+    width: 90%;
+    height: 45px;
+    margin-top: 40px;
+    border: none;
+    outline: none;
+    background-color: rgb(12, 95, 173);
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.wrappermakepaymentform .formsholderpart .paymentholder .makepayment form button:hover
+{
+    cursor: pointer;
+    font-size: 19px;
+    transition: 500ms ease-in-out;
+}
+
+@media only screen and (max-width: 900px)
+{
+    .wrappermakepaymentform
+    {
+        padding-top: 0;
+    }
+
+    .wrappermakepaymentform .formsholderpart
+    {
+        width: 75%;
+        min-height: 40vh;
+    }
+    
+    
+}
+
+@media only screen and (max-width: 480px)
+{
+    .wrappermakepaymentform
+    {
+        padding-top: 10vh;
+    }
+
+    .wrappermakepaymentform .formsholderpart
+    {
+        width: 90%;
+        min-height: 70vh;
+    }
+
+    .wrappermakepaymentform .formsholderpart .imgholder #pytmlgo
+    {
+        width: 120px;
+        height: 120px;
+    }
+
+    .wrappermakepaymentform .formsholderpart .imgholder #paymthds
+    {
+        width: 300px;
+        height: 120px;
+        margin-top: -10px;
+    }
+}
+
+#slip
+{
+    text-align: center;
+    margin: 30px;
+    margin-top: 250px;
+    border: 2px solid black;
+    font-size: 30px;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+}

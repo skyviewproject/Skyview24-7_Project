@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.wrapperadminhelpList
+{
+    padding-top: 10vh;
+}
+
+.wrapperadminhelpList h2
+{
+    font-size: 30px;
+    margin-left: 50px;
+}
+.wrapperadminhelpList .listholder
+{
+    margin-top: 50px;
+    overflow: scroll;
+    height: 60vh;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.wrapperadminhelpList .listholder::-webkit-scrollbar
+{
+    width: 0;
+}
+
+.wrapperadminhelpList .listholder table
+{
+    width: 100%;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.wrapperadminhelpList .listholder table thead th
+{
+    background-color: rgb(109,76,65);
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.wrapperadminhelpList .listholder table tbody tr:nth-child(even)
+{
+    background-color: rgb(188,170,164);
+    padding: 5px;
+    height: 40px;
+}
+
+.wrapperadminhelpList .listholder table tbody tr:nth-child(odd)
+{
+    background-color: rgb(238,238,238);
+    padding: 5px;
+    height: 40px;
+}
+
+.wrapperadminhelpList .listholder table tbody tr button
+{
+    width: 60%;
+    height: 35px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    margin: 5px;
+    color: white;
+
+}
+
+.wrapperadminhelpList .listholder table tbody tr button:hover
+{
+    cursor: pointer;
+    transition: 500ms ease-in-out;
+}
+
+.wrapperadminhelpList .listholder table tbody tr #vewbtn
+{
+    background-color: rgb(190, 136, 10);
+}
+
+.wrapperadminhelpList .listholder table tbody tr #vewbtn:hover
+{
+    background-color: rgb(141, 104, 18);
+}
+
+.wrapperadminhelpList .listholder table tbody tr #dltbtn
+{
+    background-color: rgb(189, 22, 22);
+}
+
+.wrapperadminhelpList .listholder table tbody tr #dltbtn:hover
+{
+    background-color: rgb(136, 16, 16);
+}
+
+.wrapperadminhelpList #srhfrm
+{
+    margin-left: 50px;
+    margin-top: 30px;
+}
+
+.wrapperadminhelpList #srhfrm input
+{
+    width: 50px;
+    height: 50px;
+    padding-left: 5px;
+    border-radius: 5px;
+    border: 2px solid rgb(109,76,65);
+    outline: none;
+}
+
+.wrapperadminhelpList #srhfrm button
+{
+    width: 145px;
+    height: 45px;
+    margin-left: 25px;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background-color: rgb(46,125,50);
+    color: white;
+}
+
+.wrapperadminhelpList #srhfrm button:hover
+{
+    cursor: pointer;
+    background-color: rgb(14, 83, 17);
+    transition: 500ms ease-in-out;
+}
+
+@media only screen and (max-width: 900px)
+{
+    .wrapperadminhelpList .listholder table tbody tr button
+    {
+        width: 120px;
+    }
+}
+
+
+@media only screen and (max-width: 480px)
+{
+    .wrapperadminhelpList .listholder table tbody tr
+    {
+        font-size: 14px;
+    }
+
+    .wrapperadminhelpList h2
+    {
+        font-size: 25px;
+        margin-bottom: 30px;
+    }
+
+    .wrapperadminhelpList .listholder table tbody tr button
+    {
+        font-size: 10px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .wrapperadminhelpList .listholder
+    {
+        margin-top: 50px;
+        overflow: scroll;
+        height: 80vh;
+        padding-bottom: 70px;
+    }
+}

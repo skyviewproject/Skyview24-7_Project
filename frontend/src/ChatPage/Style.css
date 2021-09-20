@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.wrapperchat
+{
+    width: 100%;
+    height: 110vh;
+    background-color: rgb(141,110,99);
+    display: flex;
+    flex-direction: column;
+    padding-top: 10vh;
+    overflow-x: hidden;
+}
+
+.wrapperchat .showchat
+{
+    flex: 70%;
+    display: flex;
+    flex-direction: row;
+}
+
+.wrapperchat .showchat .members
+{
+    width: 25%;
+    height: 70vh;
+    background-color: white;
+    margin: 30px;
+    border-radius: 25px;
+    flex: 25%;
+    overflow: scroll;
+    margin-left: 50px;
+}
+
+.wrapperchat .showchat .members h3
+{
+    text-align: center;
+    padding-top: 5px;
+}
+
+.wrapperchat .showchat .members .usrholder
+{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.wrapperchat .showchat .members .usrholder .dp
+{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(146, 83, 60);
+    border-radius: 50%;
+    color: white;
+    margin-left: 15px;
+    text-align: center;
+}
+
+.wrapperchat .showchat .members .usrholder .dp h2
+{
+    padding-top: 5px;
+}
+
+.wrapperchat .showchat .members .usrholder .usr
+{
+    padding-left: 5px;
+}
+
+.wrapperchat .showchat .members .usrholder .usr p
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    margin-top: 2px;
+}
+
+.wrapperchat .showchat .members .usrholder .usr h5
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 19px;
+}
+
+
+.wrapperchat .showchat .chtara
+{
+    flex: 75%;
+    margin: 25px;
+    margin-left: 60px;
+    height: 70vh;
+    overflow: scroll;
+    padding-bottom: 60px;
+   
+}
+
+.wrapperchat .showchat .chtara .chtbdy
+{
+    background-color: rgba(0,0,0,0.35);
+    padding: 10px;
+    margin-top: 10px;
+    width: 90%;
+    color: white;
+    border-radius: 30px;
+    border-top-right-radius: 0;
+    padding-left: 20px;
+
+}
+
+.wrapperchat .showchat .chtara .chtbdy:hover
+{
+    cursor: pointer;
+}
+
+.wrapperchat .showchat .chtara .chtbdy h5
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    font-weight: normal;
+    line-height: 22px;
+}
+
+.wrapperchat .showchat .chtara .chtbdy h6
+{
+    font-weight: lighter;
+    font-size: 12px;
+}
+
+.wrapperchat .showchat .chtara .chtbdy #refct
+{
+    font-size: 12.5px;
+    color: rgb(192, 188, 188);
+}
+
+.wrapperchat .showchat .members::-webkit-scrollbar
+{
+    width: 0;
+}
+
+.wrapperchat .showchat .chtara::-webkit-scrollbar
+{
+    width: 0;
+}
+
+
+.wrapperchat .sendchat
+{
+    flex: 20%;
+}
+
+.wrapperchat .sendchat
+{
+    margin-top: 20px;
+}
+
+.wrapperchat .sendchat form
+{
+    margin-left: 50px;
+    width: 90%;
+}
+
+.wrapperchat .sendchat form input
+{
+    width: 90%;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+.wrapperchat .sendchat form #mnip
+{
+    border-radius: 50px;
+}
+
+.wrapperchat .sendchat form .refcht
+{
+    display: none;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.wrapperchat .sendchat form .refcht #refip
+{
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    background-color: rgb(194, 193, 192);
+}
+
+.wrapperchat .sendchat form .refcht i
+{
+    font-size: 35px;
+    padding-top: 10px;
+    margin-left: -60px;
+    z-index: 2;
+}
+
+.wrapperchat .sendchat form .refcht i:hover
+{
+    cursor: pointer;
+}
+
+.wrapperchat .sendchat form button
+{
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    margin-left: 5px;
+    border: none;
+    outline: none;
+    box-shadow: 2px 2px 2px black;
+}
+
+.wrapperchat .sendchat form button:hover
+{
+    cursor: pointer;
+}
+
+.wrapperchat .sendchat form  .mncht
+{
+    margin-top: -10px;
+}
+
+.wrapperchat .sendchat form  .mncht #mnip
+{
+    /*border-radius: 0;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;*/
+}
+
+.wrapperchat .sendchat form button i
+{
+    font-size: 22px;
+}
+
+@media only screen and (max-width: 900px)
+{
+    .wrapperchat .showchat .members
+    {
+        width: 80%;
+        flex: 50%;
+    
+    }
+
+    .wrapperchat .showchat .chtara
+    {
+        flex: 50%;
+    }
+
+    .wrapperchat .showchat .chtara
+    {
+        margin-left: 20px;
+    }
+
+    .wrapperchat .sendchat form
+    {
+        width: 80%;
+    }
+
+    .wrapperchat .sendchat form input
+    {
+        width: 80%;
+    }
+
+    .wrapperchat .sendchat
+    {
+        margin-top: 0;
+    }
+
+}
+
+@media only screen and (max-width: 480px)
+{
+    .wrapperchat .showchat
+    {
+        flex: 95%;
+        display: flex;
+        flex-direction: column;
+        overflow: scroll;
+    }
+
+    .wrapperchat .showchat::-webkit-scrollbar
+    {
+        width: 0;
+    }
+
+    .wrapperchat .showchat .members
+    {
+        margin: 15px;
+        width: 90%;
+        flex: 40%;
+    
+    }
+
+    .wrapperchat .showchat .chtara
+    {
+        flex: 75%;
+        margin: 15px;
+        height: 70vh;
+        overflow: scroll;
+    }
+
+    .wrapperchat .showchat .chtara .chtbdy
+    {
+        padding: 10px;
+        margin-top: 10px;
+        width: 95%;
+        padding-left: 10px;
+
+    }
+
+    .wrapperchat .showchat .chtara .chtbdy h5
+    {
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        letter-spacing: 1.5px;
+        font-weight: normal;
+        line-height: 22px;
+    }
+
+    .wrapperchat .showchat .chtara .chtbdy h6
+    {
+        font-weight: lighter;
+        font-size: 10px;
+    }
+
+    .wrapperchat .sendchat form
+    {
+        margin-left: 20px;
+        width: 95%;
+    }
+
+    .wrapperchat .sendchat form input
+    {
+        width: 70%;
+        height: 40px;
+        padding-left: 15px;
+        padding-right: 10px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+    }
+
+    .wrapperchat .sendchat form button
+    {
+        width: 45px;
+        height: 45px;
+    }
+
+    .wrapperchat .sendchat form button i
+    {
+        font-size: 20px;
+    }
+
+    .wrapperchat
+    {
+        height: 120vh;
+    }
+    
+}

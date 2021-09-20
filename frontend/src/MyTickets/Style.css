@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.wrapperMyTicketList
+{
+    padding-top: 10vh;
+}
+
+.wrapperMyTicketList h2
+{
+    font-size: 30px;
+    margin-left: 50px;
+}
+.wrapperMyTicketList .listholder
+{
+    margin-top: 50px;
+    overflow: scroll;
+    height: 80vh;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.wrapperMyTicketList .listholder::-webkit-scrollbar
+{
+    width: 0;
+}
+
+.wrapperMyTicketList .listholder table
+{
+    width: 100%;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.wrapperMyTicketList .listholder table thead th
+{
+    background-color: rgb(109,76,65);
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.wrapperMyTicketList .listholder table tbody tr:nth-child(even)
+{
+    background-color: rgb(188,170,164);
+    padding: 5px;
+    height: 35px;
+}
+
+.wrapperMyTicketList .listholder table tbody tr:nth-child(odd)
+{
+    background-color: rgb(238,238,238);
+    padding: 5px;
+    height: 35px;
+}
+
+.wrapperMyTicketList .listholder table tbody tr button
+{
+    width: 60%;
+    height: 50px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    margin: 5px;
+    color: white;
+
+}
+
+.wrapperMyTicketList .listholder table tbody tr button:hover
+{
+    cursor: pointer;
+    transition: 500ms ease-in-out;
+}
+
+.wrapperMyTicketList .listholder table tbody tr #vewbtn
+{
+    background-color: rgb(190, 136, 10);
+}
+
+.wrapperMyTicketList .listholder table tbody tr #vewbtn:hover
+{
+    background-color: rgb(141, 104, 18);
+}
+
+.wrapperMyTicketList .listholder table tbody tr #dltbtn
+{
+    background-color: rgb(189, 22, 22);
+}
+
+.wrapperMyTicketList .listholder table tbody tr #dltbtn:hover
+{
+    background-color: rgb(136, 16, 16);
+}
+
+@media only screen and (max-width: 480px)
+{
+    .wrapperMyTicketList .listholder table tbody tr
+    {
+        font-size: 14px;
+    }
+
+    .wrapperMyTicketList h2
+    {
+        font-size: 24px;
+    }
+
+    .wrapperMyTicketList .listholder table tbody tr button
+    {
+        font-size: 10px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .wrapperMyTicketList .listholder
+    {
+        margin-top: 50px;
+        overflow: scroll;
+        height: 80vh;
+        padding-bottom: 70px;
+    }
+}

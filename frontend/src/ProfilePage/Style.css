@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.wraperprofile
+{
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    padding-bottom: 80px;
+    background-color: rgb(141,110,99);
+    padding-top: 150px;
+}
+
+.wraperprofile .containerprofile
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    justify-items: center;
+}
+
+.wraperprofile .containerprofile .card
+{
+    width: 35%;
+    min-height: 300px;
+    height: auto;
+    padding-bottom: 15px;
+    background-color: rgb(121,85,72);
+    box-shadow: 2px 2px 5px black;
+    border-radius: 5px;
+}
+
+.wraperprofile .containerprofile .card .headholder
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    background-image: url(../Images/pfbg.jpg);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 200px;
+}
+
+.wraperprofile .containerprofile .card .headholder .overlay
+{
+    height: 200px;
+    width: 35%; 
+    background-color: rgba(0,0,0,0.65);
+    position: absolute;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.wraperprofile .containerprofile .card .headholder img
+{
+    width: 30%;
+    width: 30%;
+    background-size: cover;
+    background-position: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.wraperprofile .containerprofile .card .infoholder
+{
+    padding: 15px;
+}
+
+.wraperprofile .containerprofile .card .infoholder h3
+{
+    
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
+    text-align: justify;
+    color: white;
+    line-height: 40px;
+    font-weight: normal;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.wraperprofile .containerprofile .card .btnholder
+{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.wraperprofile .containerprofile .card .btnholder button
+{
+    width: 450px;
+    height: 60px;
+    border-radius: 50px;
+    color: white;
+    border: none;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+.wraperprofile .containerprofile .card .btnholder a #updt
+{
+    background-color: rgb(190, 136, 10);
+}
+
+.wraperprofile .containerprofile .card .btnholder a #updt:hover
+{
+    cursor: pointer;
+    background-color: rgb(141, 104, 18);
+    transition: 500ms ease-in-out;
+}
+
+.wraperprofile .containerprofile .card .btnholder #lgot
+{
+    margin-top: 15px;
+    background-color: rgb(189, 22, 22);
+}
+
+.wraperprofile .containerprofile .card .btnholder #lgot:hover
+{
+    cursor: pointer;
+    background-color: rgb(136, 16, 16);
+    transition: 500ms ease-in-out;
+}
+
+
+@media only screen and (max-width: 900px)
+{
+    .wraperprofile .containerprofile .card
+    {
+        width: 70%;
+    }
+
+    .wraperprofile .containerprofile .card .headholder .overlay
+    {
+        width: 70%;
+    }
+
+    .wraperprofile
+    {
+        padding-top: 150px;
+    }
+}
+
+@media only screen and (max-width: 480px)
+{
+    .wraperprofile .containerprofile .card
+    {
+        width: 90%;
+    }
+
+    .wraperprofile .containerprofile .card .headholder .overlay
+    {
+        width: 90%;
+    }
+
+    .wraperprofile
+    {
+        padding-top: 90px;
+    }
+
+    .wraperprofile .containerprofile .card .headholder img
+    {
+        width: 50%;
+        width: 50%;
+    }
+
+    .wraperprofile .containerprofile .card .infoholder h3
+    {
+        font-size: 20px;
+    }
+
+    .wraperprofile .containerprofile .card .btnholder button
+    {
+        width: 280px;
+    }
+}
