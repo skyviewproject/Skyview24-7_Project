@@ -38,7 +38,7 @@ class PaymentList extends Component
 
         swal({
             title: "Are you sure?",
-            text: "Remove Payment Method Permanently",
+            text: "Resigning Help from Your Flat",
             icon: "warning",
             buttons: true,
             dangerMode: true,
@@ -51,7 +51,7 @@ class PaymentList extends Component
                 {
                     if(res.status == 200)
                     {
-                        swal("Payment Method Removed Successfully!", {
+                        swal("Help Resigned Successfully!", {
                             icon: "success",
                           });
                           
@@ -70,7 +70,7 @@ class PaymentList extends Component
                     }
                 })
             } else {
-              swal("Removing Payment Method Aborted!");
+              swal("Resiging Help Aborted!");
             }
           });
     }

@@ -42,6 +42,17 @@ class AddCarPage extends Component
             'carType':this.state.carType
         }
 
+        if(this.state.carBrand == ''|| this.state.carNo == ''||this.state.carType=='')
+        {
+            swal({
+                title: "Wait",
+                text: "All Fields are mandatory Please fill all the fields",
+                icon: "warning",
+              })
+        }
+        
+        else
+        {
         swal({
             title: "Are you sure?",
             text: `${ JSON.stringify(cardata)}`,
@@ -54,25 +65,14 @@ class AddCarPage extends Component
                 const api = new backEnd();
                 api.registerNewCAR(cardata).then((res) =>
                 {
+                    console.log(res.status);
                     if(res.status == 200)
                     {
-                        if(res.data === "Max 3 vehicles are Allowed and you have already resistered 3 vehicle details")
-                        {
-                            swal({
-                                title: "STOP",
-                                text: "You are not Allowed to add more than 3 Vehicles",
-                                icon: "error",
-                              })
-                        }
-
-                        else
-                        {
-                            swal("New Car added Successfully!", {
-                                icon: "success",
-                              });
-                              
-                            window.location.href = "/mycarlist";
-                        }
+                        swal("New Car added Successfully!", {
+                            icon: "success",
+                          });
+                          
+                        window.location.href = "/mycarlist";
                     }
                 })
                 .catch((error) =>
@@ -90,6 +90,7 @@ class AddCarPage extends Component
               swal("Adding Car Aborted!");
             }
           });
+        }  
     }
 
     render() 

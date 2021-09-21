@@ -33,6 +33,15 @@ class AddTickets extends Component
             'ticketTopic':this.state.ticketTopic,
             'ticketDetails':this.state.ticketDetails
         }
+        if(this.state.ticketDetails == '')
+        {
+            swal({
+                title: "Wait",
+                text: "All Fields are mandatory Please fill all the fields",
+                icon: "warning",
+              }) 
+        }
+        else{
         
         swal({
             title: "Are you sure?",
@@ -71,7 +80,7 @@ class AddTickets extends Component
               swal("Adding Ticket Aborted!");
             }
           });
-        
+        }
     }
     
     render() 

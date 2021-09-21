@@ -10,10 +10,12 @@ class Service extends Component
         return restApi.post(main_url + "/signup", user);
     }
 
-    checkIfuserisPresent(email)
+    checkIfuserisPresent(emailid)
     {
-        return restApi.get(main_url + "/ifuserexists/" + email);
+        return restApi.get(main_url + "/ifuserexists/"+ emailid);
     }
+
 }
+
 
 export default Service

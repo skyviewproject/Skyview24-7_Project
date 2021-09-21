@@ -36,12 +36,14 @@ class SendEmail extends Component
             "mailHeader": this.state.Header,
             "mailBody": this.state.MailBody
         }
+        
 
         const api = new backEnd();
         api.sendMail(mailData).then((res) =>
         {
             console.log(res.status);
-            if(res.status == 200)
+           
+             if(res.status == 200)
             {
                 swal("Done!", "Mail Has Been sended to the Resident!", "success");
                 window.location.href = "/home";
@@ -94,11 +96,11 @@ class SendEmail extends Component
                                         <label for="emailid"> Recipant Email: </label><br />
                                         <input type="email" name="emailid" id="emailid" placeholder="Enter Recipant Emailid: " onChange={this.changeMailId} value={this.state.MailId}/><br />
 
-                                        <label for="emlher">Mail Header: </label><br />
-                                        <input type="text" name="emlhero" id="emlher" placeholder="Enter Your Mobile No: " onChange={this.changeMailHeader}/><br />
+                                        <label for="emlher">Mail Subject: </label><br />
+                                        <input type="text" name="emlhero" id="emlher" placeholder="Enter The Subject of your Email: " onChange={this.changeMailHeader}/><br />
 
                                         <label for="job">Mail Body: </label><br />
-                                        <input type="text" name="job" id="job" placeholder="Enter Your Occupation: " onChange={this.changeMailBody}/><br />
+                                        <input type="text" name="job" id="job" placeholder="Enter Mail subject " onChange={this.changeMailBody}/><br />
 
                                         <button onClick={this.sendNotification}>Send Email <i class="fa fa-share-square" aria-hidden="true"></i></button>
                                     </form>

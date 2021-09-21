@@ -39,6 +39,17 @@ class AddInvoicepage extends Component
             "dueDate": this.state.Date,
             "invoiceReason": this.state.Reason
         }
+        if(this.state.User ==''||this.state.Amount==''||this.state.Date==''
+        ||this.state.Reason =='')
+        {
+            swal({
+                title: "Wait",
+                text: "All Fields are mandatory Please fill all the fields",
+                icon: "warning",
+              })
+        }
+        else
+        {
 
         swal({
             title: "Are you sure?",
@@ -77,7 +88,7 @@ class AddInvoicepage extends Component
               swal("Adding Invoice Aborted!");
             }
           });
-        
+        }
     }
     
     render() 
@@ -113,7 +124,7 @@ class AddInvoicepage extends Component
                                         <input type="number" name="ownid" id="ownid" placeholder="Enter Owner Id: " onChange={this.changeUid}/><br />
 
                                         <label for="duedt">Due Date: </label><br />
-                                        <input type="text" name="duedt" id="duedt" placeholder="Enter Due Date: " onChange={this.changeDuedate}/><br />
+                                        <input type="date" name="duedt" id="duedt" placeholder="Enter Due Date: " onChange={this.changeDuedate}/><br />
 
                                         <label for="amnt">Invoice Amount: </label><br />
                                         <input type="number" name="amnt" id="amnt" placeholder="Enter Invoice Amount: " onChange={this.changeAmount}/><br />

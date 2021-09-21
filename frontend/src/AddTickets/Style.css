@@ -37,7 +37,7 @@
 
 .wrapperaddticketsform .containerform .formholder .imghlder
 {
-    flex: 50%;
+    flex: 40%;
 }
 
 .wrapperaddticketsform .containerform .formholder .imghlder img
@@ -50,7 +50,7 @@
 
 .wrapperaddticketsform .containerform .formholder .inpthlder
 {
-    flex: 60%;
+    flex: 50%;
 }
 
 .wrapperaddticketsform .containerform .formholder .inpthlder form

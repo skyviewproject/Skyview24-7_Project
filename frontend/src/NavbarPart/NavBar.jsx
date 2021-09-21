@@ -86,7 +86,7 @@ class NavBar extends Component
                             <li><a href="/addorviewmytickets"><i class="fa fa-ticket" aria-hidden="true"></i> Tickets</a></li>
                             <li><a href="/groupchat"><i class="fa fa-comments" aria-hidden="true"></i> Group Chat</a></li>
                             <li><a href="/myinvoices"><i class="fa fa-money" aria-hidden="true"></i> Invoices</a></li>
-                            <li><a href="/addorviewpaymethod"><i class="fa fa-credit-card-alt" aria-hidden="true"></i> Pay Method</a></li>
+                            <li><a href="addorviewpaymethod"><i class="fa fa-credit-card-alt" aria-hidden="true"></i> Pay Method</a></li>
                             <li><a href="/myprofile"><i class="fa fa-user" aria-hidden="true"></i> My Profile</a></li>
                             <li><button onClick={this.logOut}>Logout Now <i class="fa fa-sign-out" aria-hidden="true"></i></button></li>
                         </ul>

@@ -51,7 +51,44 @@ class AddFamilyPage extends Component
             'relation':this.state.relation
 
         }
+        var regexEmail = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
+        if(this.state.memberName == ''||this.state.memberAge == ''||this.state.emailId == ''
+        ||this.state.mobileNo == ''|| this.state.relation =='')
+        {
+            swal({
+                title: "Wait",
+                text: "All Fields are mandatory Please fill all the fields",
+                icon: "warning",
+              })
+        }
+        else if(regexEmail.test(this.state.emailId) == false)
+        {
+            swal({
+                title: "Wait",
+                text: "Emailid is not in proper format",
+                icon: "warning",
+              })
+        }
+        else if(this.state.mobileNo.toString().length != 10)
+        {
+            swal({
+                title: "Wait",
+                text: "Mobile No must be 10 Digits",
+                icon: "warning",
+              })
+        }
+
+        else if(this.state.memberAge <1 || this.state.memberAge > 100)
+        {
+            swal({
+                title: "Wait",
+                text: "Age must be within 1 to 100",
+                icon: "warning",
+              })
+        }
+        else
+        {
         swal({
             title: "Are you sure?",
             text: `${ JSON.stringify(memberdata)}`,
@@ -89,7 +126,7 @@ class AddFamilyPage extends Component
               swal("Adding Member Aborted!");
             }
           });
-        
+        }
      }
     render() 
     {

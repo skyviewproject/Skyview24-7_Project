@@ -30,13 +30,8 @@ class PaymentPage extends Component
         this.changeRecipantdata = this.changeRecipantdata.bind(this);
         this.verifyPaymentByUser = this.verifyPaymentByUser.bind(this);
         this.makePaymentByUser = this.makePaymentByUser.bind(this);
-        this.getRecipt = this.getRecipt.bind(this);
+        this.generateText = this.generateText.bind(this);
     }
-
-    changeMethodname(event){this.setState({MethodName: event.target.value});}
-    changeMethoddetails(event){this.setState({MethodDetails: event.target.value});}
-    changePayAmount(event){this.setState({Amount: event.target.value});}
-    changeRecipantdata(event){this.setState({Recipant: event.target.value});}
 
     componentDidMount()
     {
@@ -53,7 +48,12 @@ class PaymentPage extends Component
         });
     }
 
-    getRecipt()
+    changeMethodname(event){this.setState({MethodName: event.target.value});}
+    changeMethoddetails(event){this.setState({MethodDetails: event.target.value});}
+    changePayAmount(event){this.setState({Amount: event.target.value});}
+    changeRecipantdata(event){this.setState({Recipant: event.target.value});}
+
+    generateText()
     {
         var currentdate = new Date(); var datetime = 
             currentdate.getHours() + ":"  
@@ -72,18 +72,14 @@ class PaymentPage extends Component
                 "Paid Amount:" +  this.state.Amount + "\n" +
                 "Payment Method:" +  this.state.MethodName + "\n" +
                 "Payment Time:" +  datetime
-            
-           
-            var doc = new jsPDF("p", "pt", "a4");
-            doc.addImage(logo, "PNG", 50, 40, 100, 100);
-            doc.text(text, 50, 200);
-            doc.setFontSize(25);
-            doc.setLineHeightFactor(8);
-            doc.setFont("Times New Roman");
-            doc.save("recipt.pdf");
 
-            window.location.href = "/myinvoices";
-            
+        var doc = new jsPDF("p", "pt", "a4");
+        doc.addImage(logo, "PNG", 50, 40, 100, 100);
+        doc.text(text, 50, 200);
+        doc.setFontSize(25);
+        doc.setLineHeightFactor(8);
+        doc.setFont("Times New Roman");
+        doc.save("recipt.pdf");
     }
 
     verifyPaymentByUser(event)
@@ -144,114 +140,118 @@ class PaymentPage extends Component
         const api = new backEnd();
         event.preventDefault();
 
-        api.sendOTP().catch((error) =>
+        if(this.state.Amount == 0 || this.state.Amount == null || this.state.Recipant == '')
         {
             swal({
-                title: "Error",
-                text: `${error}`,
+                title: "Wait",
+                text: "All Fields are mandatory Please fill all the fields",
                 icon: "warning",
-            });
-        })
+              })
+        }
 
-        swal("Enter the OTP sended to your Emailid:", {
-            content: "input",
-          })
-          .then((value) => 
-          {
-            var otp = {
-                "userId": new SesssionService().getUserId(),
-                "otpValue": value
-            }
-
-            api.verifyOTP(otp).then((res) => 
-            {
-                if(res.data == true)
-                {
-                    var pay = {
-                        "processUserId": parseInt(new SesssionService().getUserId()),
-                        "invoiceId": this.state.payId,
-                        "processPayMethod": this.state.MethodName,
-                        "processMethodDetails": this.state.MethodDetails,
-                        "processTotalAmount": this.state.Amount,
-                        "processRecipantDetails": this.state.Recipant
-                    }
-
-                    api.makePaymentforInvoice(pay).then((res) =>
-                    {
-                        if(res.data === "Payment has been done Successfully, just wait for Sometime to be Verified by the Admin Panel")
-                        {
-                            var currentdate = new Date(); 
-                            var datetime = 
-                            currentdate.getHours() + ":"  
-                            + currentdate.getMinutes() + ":" 
-                            + " "
-                            + currentdate.getDate() + "/"
-                            + (currentdate.getMonth()+1)  + "/" 
-                            + currentdate.getFullYear() ;
-
-                            swal({
-                                title: "SUCCESSFULL",
-                                text: "Your Payment is Completed",
-                                icon: "success",
-                                button: {
-                                    text: "Download Recipt",
-                                  },
-                              }).then((getReciptText) => 
-                              {
-                                if (getReciptText) 
-                                {
-                                  this.getRecipt();
-                                }
-                              });
-                        }
-
-                        else if(res.data === "Payment not done. Please Check the Credentials you have entered")
-                        {
-                            swal({
-                                title: "Wrong Data!",
-                                text: "You have entered the Wrong Payment Method Credentials",
-                                icon: "warning",
-                              });
-                        }
-
-                        else
-                        {
-                            swal({
-                                title: "Payment Failed",
-                                text: "Something went Wrong",
-                                icon: "warning",
-                              });
-                        }
-                    })
-                    .catch((error) =>
-                    {
-                        swal({
-                            title: "Error",
-                            text: `${error}`,
-                            icon: "warning",
-                          });
-                    })
-                }
-
-                else
-                {
-                    swal({
-                        title: "Wrong Data!",
-                        text: "You have entered the Wrong OTP! TRY AGAIN ",
-                        icon: "warning",
-                      });
-                }
-            })
-            
-          })
-          .catch((error) =>
+        else
+        {
+            api.sendOTP().catch((error) =>
             {
                 swal({
                     title: "Error",
                     text: `${error}`,
                     icon: "warning",
-                    });
-            });
+                });
+            })
+    
+            swal("Enter the OTP sended to your Emailid:", {
+                content: "input",
+              })
+              .then((value) => 
+              {
+                var otp = {
+                    "userId": new SesssionService().getUserId(),
+                    "otpValue": value
+                }
+    
+                api.verifyOTP(otp).then((res) => 
+                {
+                    if(res.data == true)
+                    {
+                        var pay = {
+                            "processUserId": parseInt(new SesssionService().getUserId()),
+                            "invoiceId": this.state.payId,
+                            "processPayMethod": this.state.MethodName,
+                            "processMethodDetails": this.state.MethodDetails,
+                            "processTotalAmount": this.state.Amount,
+                            "processRecipantDetails": this.state.Recipant
+                        }
+    
+                        api.makePaymentforInvoice(pay).then((res) =>
+                        {
+                            if(res.data === "Payment has been done Successfully, just wait for Sometime to be Verified by the Admin Panel")
+                            {
+                                swal({
+                                    title: "Completed!",
+                                    text: "You Payment is done, just wait for Sometime to be Verified by the Admin",
+                                    icon: "success",
+                                    button: {
+                                        text: "Download Recipt",
+                                      },
+                                  }).then((getReciptText) => 
+                                  {
+                                    if (getReciptText) 
+                                    {
+                                      this.generateText();
+                                      window.location.href = "/myinvoices"
+                                      
+                                    }
+                                  });
+                            }
+                            else if(res.data === "Payment not done. Please Check the Credentials you have entered")
+                            {
+                                swal({
+                                    title: "Wrong Data!",
+                                    text: "You have entered the Wrong Payment Method Credentials",
+                                    icon: "warning",
+                                  });
+                            }
+    
+                            else
+                            {
+                                swal({
+                                    title: "Payment Failed",
+                                    text: "Something went Wrong",
+                                    icon: "warning",
+                                  });
+                            }
+                        })
+                        .catch((error) =>
+                        {
+                            swal({
+                                title: "Error",
+                                text: `${error}`,
+                                icon: "warning",
+                              });
+                        })
+                    }
+    
+                    else
+                    {
+                        swal({
+                            title: "Wrong Data!",
+                            text: "You have entered the Wrong OTP! TRY AGAIN ",
+                            icon: "warning",
+                          });
+                    }
+                })
+                
+              })
+              .catch((error) =>
+                {
+                    swal({
+                        title: "Error",
+                        text: `${error}`,
+                        icon: "warning",
+                        });
+                });
+        }
     }
     
     render() 
@@ -273,7 +273,7 @@ class PaymentPage extends Component
             else
             {
                 return (
-                    <div class="wrappermakepaymentform" id="paymentformbody">
+                    <div class="wrappermakepaymentform">
                         
                         <div class="formsholderpart">
 
@@ -323,7 +323,6 @@ class PaymentPage extends Component
                             </div>
                             
                         </div>
-
                     </div>
                 )
             }

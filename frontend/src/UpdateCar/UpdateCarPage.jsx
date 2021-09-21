@@ -58,6 +58,15 @@ class UpdateCarPage extends Component
         }
 
         const api = new backEnd();
+        if(this.state.carBrand == ''|| this.state.carNo == ''||this.state.carType=='')
+        {
+            swal({
+                title: "Wait",
+                text: "All Fields are mandatory Please fill all the fields",
+                icon: "warning",
+              })
+        }
+        else{
 
         swal({
             title: "Are you sure?",
@@ -96,6 +105,7 @@ class UpdateCarPage extends Component
               swal("Updating Member Aborted!");
             }
           });
+        }
         
     }
     

@@ -138,7 +138,7 @@ export class TicketAndResolve extends Component {
                                                     <td>{tickets.ticketIssuedate}</td>
                                                     <td>{tickets.ticketStatus}</td>
                                                     <td>{tickets.ticketSolveddate}</td>
-                                                    <td><button id="vewbtn" onClick={() => this.resolveTicket(tickets.id)}>View/Update <i class="fa fa-eye" aria-hidden="true"></i></button></td>
+                                                    <td><button id="vewbtn" onClick={() => this.resolveTicket(tickets.id)}>solve <i class="fa fa-eye" aria-hidden="true"></i></button></td>
                                                 
                                                 </tr>
                                                 

@@ -33,6 +33,8 @@ class Login extends Component
 
         var username = this.state.UserEmailid;
         var password = this.state.UserPassword;
+      
+
 
         api.loginService(username, password).then((res) => 
         {
@@ -60,6 +62,7 @@ class Login extends Component
 
                 console.log(res.data.access_token);
             }
+     
 
             else
             {
@@ -127,103 +130,3 @@ class Login extends Component
 }
 
 export default Login
-
-
-
-
-
-
-
-// import React, { Component } from 'react'
-// import "../LoginPage/Style.css";
-// import SessionService from "../SessionManagement/SesssionService";
-// import Formbg from "../Images/formbg.jpg";
-// import LoginService from "./Service";
-
-
-// class Login extends Component 
-// {
-//     constructor(props) {
-//         super(props)
-
-//         this.state = 
-//         {
-//             UserEmailid: '',
-//             UserPassword: '',
-//             infoSMS: 'No Error',
-//         }
-
-//         this.changeEmailId = this.changeEmailId.bind(this);
-//         this.changePassword = this.changePassword.bind(this);
-//         this.loginAndCreateSession = this.loginAndCreateSession.bind(this);
-//     }
-
-//     changeEmailId(event){this.setState({UserEmailid: event.target.value});}
-//     changePassword(event){this.setState({UserPassword: event.target.value});}
-
-//     loginAndCreateSession(event)
-//     {
-//         event.preventDefault();
-//         const userSession = new SessionService();
-//         const api = new LoginService();
-
-//         var token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MzE5MDMyNTcsInVzZXJfbmFtZSI6ImJhcnVuYTM4NEBnbWFpbC5jb20iLCJhdXRob3JpdGllcyI6WyJST0xFX1JFU0lERU5UIl0sImp0aSI6ImJ0bnVNU1I0RWNwbFYyNGIyM3FNU2JEV093WSIsImNsaWVudF9pZCI6IlNreVZpZXcyNCo3X0NsaWVudElkIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.YoCnUFO7x4UK7sgJAkyd_OJZ-FTGrypUuS0GJNH4UCo";
-//         userSession.loginUserAndAndCreateSession(null, null, token);
-
-//         api.getUserdataAfterLogin(this.state.UserEmailid).then((res) =>
-//         {
-//             var a = res.data.split(",");
-//             userSession.loginUserAndAndCreateSession(parseInt(a[0]), a[1], token);
-//             console.log(a[0],a[1],token);
-
-//             window.location.href = "/home";
-//         })
-//         .then((error) =>
-//         {
-//             console.log(error);
-//         })
-
-//     }
-    
-//     render() 
-//     {
-//         const user = new SessionService();
-//         if(user.getUserSession()!=null)
-//         {
-//             window.location.href = "/home"
-//         }
-
-//         else
-//         {
-    
-//             return (
-//                 <div class="wrapperloginform">
-                    
-//                     <div class="containerform">
-//                         <div class="formholder">
-//                             <div class="imghlder">
-//                                 <img src={Formbg} alt="formbg" srcset="" />
-//                             </div>
-
-//                             <div class="inpthlder">
-//                                 <form>
-//                                     <label for="uname">Username: </label><br />
-//                                     <input type="text" name="uname" id="uname" placeholder="Enter Your Emailid: " onChange={this.changeEmailId}/><br />
-
-//                                     <label for="pwd">Password: </label><br />
-//                                     <input type="password" name="pwd" id="pwd" placeholder="Enter Your Password: " onChange={this.changePassword}/><br />
-
-//                                     <button onClick={this.loginAndCreateSession}>Login Now <i class="fa fa-sign-in" aria-hidden="true"></i></button>
-//                                 </form>
-
-//                                 <h2>Don't have any account ..... <a href="/signup">Signup Now</a></h2>
-//                             </div>
-//                         </div>
-//                     </div>
-//                 </div>
-//             )
-//         }
-//     }
-// }
-
-// export default Login

@@ -45,7 +45,34 @@ class Registerhelp extends Component
             "helpGender": this.state.Gender,
             "helpType": this.state.HelpType
         }
+        if(this.state.Fullname ==''||this.state.MobileNo==''||this.state.HelpAge==''
+      ||this.state.HelpType=='')
+       {
+        swal({
+            title: "Wait",
+            text: "All Fields are mandatory Please fill all the fields",
+            icon: "warning",
+          })
+       }
+       
+       else if(this.state.MobileNo.toString().length != 10)
+       {
+           swal({
+               title: "Wait",
+               text: "Mobile No must be 10 Digits",
+               icon: "warning",
+             })
+       }
 
+       else if(this.state.HelpAge <1 || this.state.HelpAge > 100)
+       {
+           swal({
+               title: "Wait",
+               text: "Age must be within 1 to 100",
+               icon: "warning",
+             })
+       }
+        else{
         swal({
             title: "Are you sure?",
             text: `${ JSON.stringify(helpData)}`,
@@ -82,7 +109,7 @@ class Registerhelp extends Component
               swal("Adding Help Aborted!");
             }
           });
-        
+        } 
  
     }
     

@@ -18,7 +18,7 @@ class Signup extends Component
             UserAge: 0,
             Password: '',
             UserJob: '',
-            Gender: 'Male',
+            Gender: '',
         }
 
         this.changeUsername = this.changeUsername.bind(this);
@@ -53,6 +53,56 @@ class Signup extends Component
             "userAge": this.state.UserAge,
             "userOccupation": this.state.UserJob
         }
+        var regexEmail = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+        if(this.state.Username == '' || this.state.Emailid == '' || this.state.MobileNo == '' || this.state.Password == '' || this.state.UserAge == '' || 
+         this.state.UserJob == '')
+        {
+            swal({
+                title: "Wait",
+                text: "All Fields are mandatory Please fill all the fields",
+                icon: "warning",
+              })
+        }
+        else if(regexEmail.test(this.state.Emailid) == false)
+        {
+            swal({
+                title: "Wait",
+                text: "Emailid is not in proper format",
+                icon: "warning",
+              })
+        }
+
+        else if(this.state.MobileNo.toString().length != 10)
+        {
+            swal({
+                title: "Wait",
+                text: "Mobile No must be 10 Digits",
+                icon: "warning",
+              })
+        }
+
+        else if(this.state.UserAge <1 || this.state.UserAge > 100)
+        {
+            swal({
+                title: "Wait",
+                text: "Age must be within 1 to 100",
+                icon: "warning",
+              })
+        }
+
+        else if(this.state.Password.length < 5)
+        {
+            swal({
+                title: "Wait",
+                text: "Password Length must be 5 or greater than 5",
+                icon: "warning",
+              })
+        }
+
+
+        else{
+
 
         swal({
             title: "Are you sure?",
@@ -116,7 +166,7 @@ class Signup extends Component
             }
           });
 
-        
+        }
         
  
     }
