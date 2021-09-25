@@ -5,34 +5,52 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import com.example.skyview.Model.UserModel;
-import com.example.skyview.Repo.UserRepo;
+import com.example.skyview.Repo.*;
 
 @Service
 public class UserServices 
 {
 	@Autowired
-	UserRepo repo;
+	UserRepo repo1;
+	
+	@Autowired
+	CarDetailsRepo repo2;
+	
+	@Autowired
+	FamilyMembersRepo repo3;
+	
+	@Autowired
+	HelpAssociationRepo repo4;
+	
+	@Autowired
+	PaymentDetailsRepo repo5;
+	
+	@Autowired
+	PaymentMethodRepo repo6;
+	
+	@Autowired
+	InvoiceRepo repo7;
 	
 	public boolean addUser(UserModel user)
 	{
 		user.setUserPassword(new BCryptPasswordEncoder().encode(user.getUserPassword()));
-		repo.save(user);
+		repo1.save(user);
 		return true;
 	}
 	
 	public List<UserModel> findAllUser()
 	{
-		return repo.findAll();
+		return repo1.findAll();
 	}
 
 	public UserModel findUserbyId(long id) 
 	{
-		return repo.findById(id).get();
+		return repo1.findById(id).get();
 	}
 	
 	public boolean updateProfilebyUser(long id, UserModel prev)
 	{
-		UserModel updated = repo.findById(id).get();
+		UserModel updated = repo1.findById(id).get();
 		
 		updated.setFullName(prev.getFullName());
 		updated.setEmailId(prev.getEmailId());
@@ -42,14 +60,14 @@ public class UserServices
 		updated.setUserOccupation(prev.getUserOccupation());
 		updated.setUserPassword(new BCryptPasswordEncoder().encode(prev.getUserPassword()));
 		
-		repo.save(updated);
+		repo1.save(updated);
 		return true;
 	}
 	
 	public boolean updateProfilebyAdmin(long id, UserModel prev)
 	{
 
-		UserModel updated = repo.findById(id).get();	
+		UserModel updated = repo1.findById(id).get();	
 		updated.setFullName(prev.getFullName());
 		updated.setEmailId(prev.getEmailId());
 		updated.setUserGender(prev.getUserGender());
@@ -73,13 +91,19 @@ public class UserServices
 		updated.setUserRole(prev.getUserRole());
 		updated.setVerified(prev.isActive());
 		updated.setActive(prev.isVerified());
-		repo.save(updated);
+		repo1.save(updated);
 		return true;
 	}
 	
 	public boolean deleteUser(long id)
 	{
-		repo.deleteById(id);
+		repo7.removeInvoicesOfDeletedUser(id);
+		repo6.removePaymentsOfDeletedUser(id);
+		repo5.removePaymentDetailsOfDeletedUser(id);
+		repo4.removeHelperOfDeletedUser(id);
+		repo3.removeFamilyOfDeletedUser(id);
+		repo2.removeCarsOfDeletedUser(id);
+		repo1.deleteById(id);
 		return true;
 	}
 	

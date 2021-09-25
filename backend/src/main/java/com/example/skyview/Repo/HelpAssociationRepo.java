@@ -26,4 +26,9 @@ public interface HelpAssociationRepo extends JpaRepository<HelpAssociationModel,
 	@Transactional
 	@Query(value="DELETE FROM `helpassosication_info` WHERE `helper_id`= :helperId AND `resident_id`= :residentId", nativeQuery=true)
 	void resignHelper(long residentId, long helperId);
+	
+	@Modifying
+	@Transactional
+	@Query(value="DELETE FROM `helpassosication_info` WHERE`resident_id`= :residentId", nativeQuery=true)
+	void removeHelperOfDeletedUser(long residentId);
 }
