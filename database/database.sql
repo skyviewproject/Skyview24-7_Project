@@ -38,7 +38,7 @@ CREATE TABLE `cardetails_info` (
 
 LOCK TABLES `cardetails_info` WRITE;
 /*!40000 ALTER TABLE `cardetails_info` DISABLE KEYS */;
-INSERT INTO `cardetails_info` VALUES (1,'WB-07 7854','2 wheelers',2,'Yamaha'),(2,'WB-07 7654','2 wheelers',3,'honda'),(3,'WB-07 8654','4 wheelers',4,'BMW'),(5,'WB-07 5654','4 wheelers',4,'Maruti'),(8,'WB-04 9654','4 Wheeler',12,'Tata Yamaha'),(10,'WB-04 8651','3 Wheeler',1,'Honda'),(12,'WB-04 9654','4 Wheeler',1,'Maruti');
+INSERT INTO `cardetails_info` VALUES (1,'WB-07 7854','2 wheelers',2,'Yamaha'),(2,'WB-07 7654','2 wheelers',3,'honda'),(3,'WB-07 8654','4 wheelers',4,'BMW'),(5,'WB-07 5654','4 wheelers',4,'Maruti'),(8,'WB-04 9654','4 Wheeler',12,'Tata Yamaha');
 /*!40000 ALTER TABLE `cardetails_info` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -122,7 +122,7 @@ CREATE TABLE `family_info` (
 
 LOCK TABLES `family_info` WRITE;
 /*!40000 ALTER TABLE `family_info` DISABLE KEYS */;
-INSERT INTO `family_info` VALUES (1,'sumnoa143@gmail.com','9684520314',1,'Mother-In-Law',40,'Sumona Das'),(3,'arun123@gamil.com','8103264579',12,'Husband',35,'Arun Biswas'),(7,'hdcfh@mail.com','9684520314',1,'Husband',25,'Updated Name'),(8,'some@mail.com','8564120374',12,'Father',25,'Sumona Das');
+INSERT INTO `family_info` VALUES (3,'arun123@gamil.com','8103264579',12,'Husband',35,'Arun Biswas'),(8,'some@mail.com','8564120374',12,'Father',25,'Sumona Das');
 /*!40000 ALTER TABLE `family_info` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -147,7 +147,7 @@ CREATE TABLE `helpassosication_info` (
 
 LOCK TABLES `helpassosication_info` WRITE;
 /*!40000 ALTER TABLE `helpassosication_info` DISABLE KEYS */;
-INSERT INTO `helpassosication_info` VALUES (2,1,2),(3,4,3),(5,2,5),(6,1,4),(7,1,1),(9,4,12),(11,8,1);
+INSERT INTO `helpassosication_info` VALUES (2,1,2),(3,4,3),(5,2,5),(6,1,4),(9,4,12);
 /*!40000 ALTER TABLE `helpassosication_info` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -174,7 +174,7 @@ CREATE TABLE `invoice_info` (
 
 LOCK TABLES `invoice_info` WRITE;
 /*!40000 ALTER TABLE `invoice_info` DISABLE KEYS */;
-INSERT INTO `invoice_info` VALUES (1,'15/09/21',1,8000,'Salary For Cook'),(2,'15/09/21',1,5000,'Room Rent'),(5,'15/05/21',4,5000,'Salary For Maid');
+INSERT INTO `invoice_info` VALUES (5,'15/05/21',4,5000,'Salary For Maid');
 /*!40000 ALTER TABLE `invoice_info` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -257,7 +257,6 @@ CREATE TABLE `payhistory_info` (
 
 LOCK TABLES `payhistory_info` WRITE;
 /*!40000 ALTER TABLE `payhistory_info` DISABLE KEYS */;
-INSERT INTO `payhistory_info` VALUES (1,'11:30:10 2021/09/21','UPI PAYMENT',1,'NOT_VERIFIED','admin@okaxis',5000,1,NULL);
 /*!40000 ALTER TABLE `payhistory_info` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -283,7 +282,6 @@ CREATE TABLE `paymethod_info` (
 
 LOCK TABLES `paymethod_info` WRITE;
 /*!40000 ALTER TABLE `paymethod_info` DISABLE KEYS */;
-INSERT INTO `paymethod_info` VALUES (1,'saradas@okhdfc','UPI PAYMENT',1),(5,'2034 6598 1204 3654: 339','DEBIT CARD',1);
 /*!40000 ALTER TABLE `paymethod_info` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -348,7 +346,7 @@ CREATE TABLE `user_info` (
 
 LOCK TABLES `user_info` WRITE;
 /*!40000 ALTER TABLE `user_info` DISABLE KEYS */;
-INSERT INTO `user_info` VALUES (1,'12P','sara475@gmail.com','Sara Das',_binary '',_binary '',6321452039,48,'2A','Female','Doctor','$2a$10$2NK4rVPBBKJEVGzhicjbGuDnJzvGHjeYUWDIsVRDt8tdzZVnv44zG','ROLE_RESIDENT'),(2,'2A','roy123@gmail.com','Abhinav Roy',_binary '',_binary '',7845963219,28,'1C','Male','Engineer','$2a$12$b61NeHRDqoL5oWCMe7uxRu1dKk08scEgwh9c5q.IJf.tRkCn67JV.','ROLE_RESIDENT'),(4,'8A','chaterjee710@gmail.com','Udita Chaterjee',_binary '',_binary '',8845963214,24,'4B','Female','Doctor','$2a$10$zFGyk.R09WXof5ifwx1Bku3wZ2GU0Pq65ZbS47WuDs46wNoTCrzDS','ROLE_SUPERVISIOR'),(5,'3B','patra263@gmail.com','Abhishek Patra',_binary '',_binary '',8545963214,24,'5C','Male','Engineer','$2a$10$.bIuO.N.YW.EElbOAFGzo.hRuRuT/AQmjDnB6kiJSFdFKwGfMapvq','ROLE_SUPERVISIOR'),(7,'30A','kar123@gmail.com','Anindita Karmakar',_binary '',_binary '',8595923214,39,'9W','Female','Architect','$2a$10$EuE/rl9Rk4J/BqMXqU9dcOTJg/H7RXwdOi71b1H8QUeUlTT.ioeeS','ROLE_ADMIN'),(8,'3L','banerjee503@gmail.com','Ritika Banerjee',_binary '',_binary '',8592923214,24,'30B','Female','Teacher','$2a$10$nkTCiMGIRsF3e6G9ScwMzeGnTGuXNtqRIKY3p5LplbsRHDdu0infO','ROLE_ADMIN'),(10,'85R','layek123@gmail.com','koushik Layek',_binary '',_binary '',9592993314,29,'5L','Male','Engineer','$2a$10$p6RlHVfhTT5gx9mCSQGngO5/uHpY7aJ73ay3SMizFKFjr3yonrzt6','ROLE_RESIDENT'),(12,'6Y','baruna384@gmail.com','Baruna Biswas',_binary '',_binary '',8012365740,39,'15A','Female','Doctor','$2a$10$oBzP6ndY6Gjj4f/CEM4MeOWoORtRIGXIZqYwxAWjIlHxoIrZuS13S','ROLE_RESIDENT'),(15,'2U','infoarpan803@gmail.com','Arpan Mondal',_binary '',_binary '',9601245736,32,'6P','Male','Manager at Infoware','$2a$10$Vj7GmesoYAMaGDaPTV0.Au17F6wVaOxar9pko7W7ec3c4LNhN5ABW','ROLE_SUPERVISIOR');
+INSERT INTO `user_info` VALUES (2,'2A','roy123@gmail.com','Abhinav Roy',_binary '',_binary '',7845963219,28,'1C','Male','Engineer','$2a$12$b61NeHRDqoL5oWCMe7uxRu1dKk08scEgwh9c5q.IJf.tRkCn67JV.','ROLE_RESIDENT'),(4,'8A','chaterjee710@gmail.com','Udita Chaterjee',_binary '',_binary '',8845963214,24,'4B','Female','Doctor','$2a$10$zFGyk.R09WXof5ifwx1Bku3wZ2GU0Pq65ZbS47WuDs46wNoTCrzDS','ROLE_SUPERVISIOR'),(5,'3B','patra263@gmail.com','Abhishek Patra',_binary '',_binary '',8545963214,24,'5C','Male','Engineer','$2a$10$.bIuO.N.YW.EElbOAFGzo.hRuRuT/AQmjDnB6kiJSFdFKwGfMapvq','ROLE_SUPERVISIOR'),(7,'30A','kar123@gmail.com','Anindita Karmakar',_binary '',_binary '',8595923214,39,'9W','Female','Architect','$2a$10$EuE/rl9Rk4J/BqMXqU9dcOTJg/H7RXwdOi71b1H8QUeUlTT.ioeeS','ROLE_ADMIN'),(8,'3L','banerjee503@gmail.com','Ritika Banerjee',_binary '',_binary '',8592923214,24,'30B','Female','Teacher','$2a$10$nkTCiMGIRsF3e6G9ScwMzeGnTGuXNtqRIKY3p5LplbsRHDdu0infO','ROLE_ADMIN'),(10,'85R','layek123@gmail.com','koushik Layek',_binary '',_binary '',9592993314,29,'5L','Male','Engineer','$2a$10$p6RlHVfhTT5gx9mCSQGngO5/uHpY7aJ73ay3SMizFKFjr3yonrzt6','ROLE_RESIDENT'),(12,'6Y','baruna384@gmail.com','Baruna Biswas',_binary '',_binary '',8012365740,39,'15A','Female','Doctor','$2a$10$oBzP6ndY6Gjj4f/CEM4MeOWoORtRIGXIZqYwxAWjIlHxoIrZuS13S','ROLE_RESIDENT'),(15,'2U','infoarpan803@gmail.com','Arpan Mondal',_binary '',_binary '',9601245736,32,'6P','Male','Manager at Infoware','$2a$10$Vj7GmesoYAMaGDaPTV0.Au17F6wVaOxar9pko7W7ec3c4LNhN5ABW','ROLE_SUPERVISIOR');
 /*!40000 ALTER TABLE `user_info` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -361,4 +359,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-09-21 11:31:49
+-- Dump completed on 2021-09-25 12:02:17
