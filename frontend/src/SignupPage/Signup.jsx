@@ -220,7 +220,7 @@ class Signup extends Component
                                     <button onClick={this.signupuser}>Signup Now <i class="fa fa-sign-in" aria-hidden="true"></i></button>
                                 </form>
 
-                                <h2>Already have an account ..... <a href="/login">Login Now</a></h2>
+                                <h2>One of Us.. <a href="/login">Login Now</a></h2>
                             </div>
                         </div>
                     </div>

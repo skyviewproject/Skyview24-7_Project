@@ -26,7 +26,7 @@ public class OauthResourceServerConfig extends ResourceServerConfigurerAdapter
 		.csrf() .disable()
         .authorizeRequests()
         .antMatchers("/admin/**","/resident/**","/supervisor/**","/common/**").authenticated()
-        .antMatchers("/signup","/ifuserexists/**", "/login", "/authandlogin").permitAll()
+        .antMatchers("/signup","/ifuserexists/**", "/login", "/authandlogin", "/sendotp/{emailId}", "/matchotp", "/restpassword").permitAll()
         .and()
         .formLogin().permitAll()
         .and().sessionManagement()

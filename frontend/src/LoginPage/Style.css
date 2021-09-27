@@ -2,18 +2,12 @@
 
 .wrapperloginform
 {
-    padding-top: 10vh;
+    padding-top: 15vh;
     height: auto;
     min-height: 90vh;
     padding-bottom: 30px;
     width: 100%;
     background-color: rgb(141,110,99);
-}
-
-.wrapperloginform h2
-{
-    font-size: 30px;
-    padding-left: 40px;
 }
 
 .wrapperloginform .containerform
@@ -25,37 +19,43 @@
 
 .wrapperloginform .containerform .formholder
 {
-    width: 40%;
-    height: 400px;
+    width: 30%;
+    min-height: 400px;
+    height: auto;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     background-color: rgb(121,85,72);
     border-radius: 5px;
     margin-top: 5vh;
     box-shadow: 2px 2px 5px black;
+    padding-bottom: 30px;
 }
 
 .wrapperloginform .containerform .formholder .imghlder
 {
-    flex: 40%;
+    flex: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .wrapperloginform .containerform .formholder .imghlder img
 {
-    height: 400px;
-    width: 100%;
+    height: 150px;
+    width: 150px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+    margin-top: -50px;
 }
 
 .wrapperloginform .containerform .formholder .inpthlder
 {
-    flex: 60%;
+    flex: 70%;
 }
 
 .wrapperloginform .containerform .formholder .inpthlder form
 {
-    margin: 20px;
+    margin: 5%;
 }
 
 .wrapperloginform .containerform .formholder .inpthlder form label
@@ -68,7 +68,7 @@
 .wrapperloginform .containerform .formholder .inpthlder form input
 {
     height: 30px;
-    width: 95%;
+    width: 90%;
     margin-top: 7px;
     border-radius: 50px;
     border: none;
@@ -94,7 +94,7 @@
 .wrapperloginform .containerform .formholder .inpthlder form button
 {
     margin-top: 30px;
-    width: 97%;
+    width: 95%;
     height: 45px;
     border-radius: 50px;
     border: none;
@@ -111,15 +111,65 @@
     transition: 500ms ease-in-out;
 }
 
-.wrapperloginform .containerform .formholder .inpthlder h2
+.wrapperloginform .containerform .formholder .inpthlder .linkhold .subdiv1
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.wrapperloginform .containerform .formholder .inpthlder .linkhold input.chkbx
+{
+    width: 20px;
+    height: 20px;
+}
+
+.wrapperloginform .containerform .formholder .inpthlder .linkhold .subdiv1
+{
+    padding-top: 10px;
+}
+
+.wrapperloginform .containerform .formholder .inpthlder .linkhold .subdiv1 label
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 19px;
+    color: white;
+    padding-left: 2px;
+}
+
+.wrapperloginform .containerform .formholder .inpthlder .linkhold .subdiv1 h3
+{
+   margin-left: 10%;
+   font-family: 'Roboto', sans-serif;
+   font-size: 22px;
+   color: white;
+   text-shadow: 2px 2px 5px black;
+   font-weight: lighter;
+}
+
+.wrapperloginform .containerform .formholder .inpthlder .linkhold .subdiv1 h3:hover
+{
+    cursor: pointer;
+}
+
+.wrapperloginform .containerform .formholder .inpthlder .linkhold .subdiv2
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -5%;
+}
+
+.wrapperloginform .containerform .formholder .inpthlder .linkhold .subdiv2 h2
 {
     font-size: 22px;
     padding-right: 10px;
     font-family: 'Roboto', sans-serif;
     margin-top: 40px;
+    color: black;
 }
 
-.wrapperloginform .containerform .formholder .inpthlder h2 a
+.wrapperloginform .containerform .formholder .inpthlder .linkhold .subdiv2 h2 a
 {
     font-size: 30px;
     color: rgb(46,125,50);
@@ -127,7 +177,7 @@
     text-shadow: 2px 2px 5px black;
 }
 
-.wrapperloginform .containerform .formholder .inpthlder h2 a:hover
+.wrapperloginform .containerform .formholder .inpthlder .linkhold .subdiv2 h2 a:hover
 {
     font-size: 31px;
     transition: 500ms ease-in-out;
@@ -156,7 +206,7 @@
 
     .wrapperloginform .containerform .formholder .imghlder
     {
-        flex: 30%;
+        flex: 20%;
     }
 
     .wrapperloginform .containerform .formholder .inpthlder
@@ -168,12 +218,6 @@
     {
         width: 90%;
         flex-direction: column;
-        height: 550px;
-    }
-
-    .wrapperloginform .containerform .formholder .imghlder img
-    {
-        height: 150px;
     }
 
     .wrapperloginform .containerform h2
@@ -186,6 +230,17 @@
         border-top-left-radius: 5px;
         border-bottom-left-radius: 0;
         border-top-right-radius: 5px;
+    }
+
+    .wrapperloginform .containerform .formholder .inpthlder .linkhold .subdiv1 h3
+    {
+        padding-left: 10px;
+        font-size: 17px;
+    }
+
+    .wrapperloginform .containerform .formholder .inpthlder .linkhold .subdiv1 label
+    {
+        font-size: 17px;
     }
     
 }

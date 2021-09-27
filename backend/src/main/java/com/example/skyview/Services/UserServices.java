@@ -107,4 +107,10 @@ public class UserServices
 		return true;
 	}
 	
+	public boolean UpdatePassword(String emailId, String password)
+	{
+		password = new BCryptPasswordEncoder().encode(password);
+		repo1.updatePassword(emailId, password);
+		return true;
+	}
 }

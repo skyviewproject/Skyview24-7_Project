@@ -141,6 +141,17 @@
     {
         width: 70%;
     }
+
+    .wrappersignupform .containerform .formholder .inpthlder h2 a
+    {
+        font-size: 25px;
+    }
+
+    .wrappersignupform .containerform .formholder .inpthlder h2
+    {
+        font-size: 20px;
+        padding-right: 5px;
+    }
 }
 
 @media only screen and (max-width: 480px)

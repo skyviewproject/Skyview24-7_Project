@@ -26,19 +26,8 @@ public class MyUserDetailService implements UserDetailsService
 	public UserDetails loadUserByUsername(String emailId) throws UsernameNotFoundException 
 	{
 	   Optional<UserModel> user = repo.findByEmailId(emailId);
-
        user.orElseThrow(() -> new UsernameNotFoundException("Sorry User is Not Registered"));
        
-       if(user.isPresent()==true)
-       {
-    	   System.out.println("USER is Present");
-       }
-       
-       else
-       {
-    	   System.out.println("No USER is Present");
-       }
-
        return (UserDetails) user.map(MyUserDetails::new).get();
 	       
 	}
@@ -51,7 +40,7 @@ public class MyUserDetailService implements UserDetailsService
 	public boolean IsUserPresent(String emailId)
 	{
 	   List<UserModel> user = repo.ifUserPresentorNot(emailId);
-	   System.out.println(user.size());
+	   
        if(user.size()==0)
        {
     	   return false;

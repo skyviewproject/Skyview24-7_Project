@@ -31,6 +31,33 @@ class Service extends Component
 
     }
 
+    checkIfuserisPresent(emailid)
+    {
+        return restApi.get(main_url + "/ifuserexists/"+ emailid);
+    }
+
+    sendOTP(emailId)
+    {
+        return restApi.post(main_url + "/sendotp/" + emailId, null);
+    }
+
+    verifyOTP(emailId, otpmodel)
+    {
+        return restApi.post(main_url + "/matchotp/" + emailId, otpmodel);
+    }
+
+    resetPassword(emailId, password)
+    {
+        var user = {
+            "username": emailId,
+	        "password": password
+	
+        }
+
+
+        return restApi.put(main_url + "/restpassword" , user);
+    }
+
 }
 
 export default Service

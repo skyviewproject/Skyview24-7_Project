@@ -54,7 +54,7 @@ public class OTPService
 
         msg.setRecipients(Message.RecipientType.TO, InternetAddress.parse("skyviewproject247@gmail.com"));
         msg.setContent(value, "text/plain");
-        msg.setSubject("OTP for Payment");
+        msg.setSubject("OTP from SKYVIEW24*7");
         Transport.send(msg);
         System.out.println("OTP is: " + msg);
 		return true;
