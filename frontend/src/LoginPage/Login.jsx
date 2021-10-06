@@ -44,9 +44,9 @@ class Login extends Component
 
         api.loginService(username, password).then((res) => 
         {
-            if(res.status == 200)
+            if(res.data.isAuthenticated === true)
             {
-                var token = res.data.access_token;
+                var token = res.data.bearerToken;
                 userSession.loginUserAndAndCreateSession(null, null, token);
 
                 api.getUserdataAfterLogin(this.state.UserEmailid).then((res) =>
@@ -60,30 +60,30 @@ class Login extends Component
                 .catch((error) =>
                 {
                     swal({
-                        title: "Wait",
-                        text: "Something Wrong Happened in the Backend",
+                        title: "Error",
+                        text: `${error}`,
                         icon: "error",
                       });
                 })
-
-                console.log(res.data.access_token);
+                
             }
      
 
             else
             {
+                var error = JSON.stringify(res.data.errorMessage);
                 swal({
-                    title: "Login Failed!",
-                    text: "Either Your Account is Disabled or You have entired Wrong Credentails",
-                    icon: "error",
+                    title: "Wait",
+                    text: `${error}`,
+                    icon: "warning",
                   });
             }
         })
         .catch((error) =>
         {
             swal({
-                title: "Login Failed!",
-                text: "Either Your Account is Disabled or You have entired Wrong Credentails",
+                title: "Error",
+                text: `${error}`,
                 icon: "error",
               });
         })

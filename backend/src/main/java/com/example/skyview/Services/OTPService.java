@@ -56,7 +56,6 @@ public class OTPService
         msg.setContent(value, "text/plain");
         msg.setSubject("OTP from SKYVIEW24*7");
         Transport.send(msg);
-        System.out.println("OTP is: " + msg);
 		return true;
 	}
 	

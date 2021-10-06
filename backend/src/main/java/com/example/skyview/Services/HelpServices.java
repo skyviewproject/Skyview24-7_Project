@@ -72,23 +72,27 @@ public class HelpServices
 	public List<List<String>> findHelperWorkinginDifferntflats(long helperId)
 	{
 		List<List<String>> list = new ArrayList<List<String>>();
-		int i=0,n=0;
-		List<HelpAssociationModel> model = repo2.findByHelpersbyHelpersId(helperId);
-		n = model.size();
-		
-		for(i=0;i<n;i++)
+		if(repo1.findById(helperId).isEmpty() != true)
 		{
-			List<String> al = new ArrayList<String>();
-			long residentId = model.get(i).getResidentId();
-			al.add(String.valueOf(repo1.findById(helperId).get().getId()));
-			al.add(repo3.findById(residentId).get().getFullName());
-			al.add(repo3.findById(residentId).get().getUserFlatNo());
-			al.add(repo3.findById(residentId).get().getBlockNo());
-			al.add(repo1.findById(helperId).get().getHelpName());
-			al.add(repo1.findById(helperId).get().getHelpType());
-			al.add(repo1.findById(helperId).get().getHelpContact());
+			int i=0,n=0;
+			List<HelpAssociationModel> model = repo2.findByHelpersbyHelpersId(helperId);
+			n = model.size();
 			
-			list.add(al);
+			for(i=0;i<n;i++)
+			{
+				List<String> al = new ArrayList<String>();
+				long residentId = model.get(i).getResidentId();
+				al.add(String.valueOf(repo1.findById(helperId).get().getId()));
+				al.add(repo3.findById(residentId).get().getFullName());
+				al.add(repo3.findById(residentId).get().getUserFlatNo());
+				al.add(repo3.findById(residentId).get().getBlockNo());
+				al.add(repo1.findById(helperId).get().getHelpName());
+				al.add(repo1.findById(helperId).get().getHelpType());
+				al.add(repo1.findById(helperId).get().getHelpContact());
+				
+				list.add(al);
+			}
+		
 		}
 		
 		

@@ -1,8 +1,12 @@
 package com.example.skyview.Services;
+import java.net.http.HttpResponse;
 import java.util.Arrays;
 import java.util.Base64;
 import java.util.Collections;
 import java.util.List;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -24,25 +28,40 @@ public class OauthLoginService
         
         MultiValueMap<String, String> formData = new LinkedMultiValueMap<>();
         
-        //System.out.println(uname + " " + psw);
-        
         formData.add("grant_type","password");
         formData.add("username",uname);
         formData.add("password", psw);
         
 		HttpHeaders header = new HttpHeaders();
 		header.setAccept(Collections.singletonList(MediaType.APPLICATION_FORM_URLENCODED));
+		header.set("Accept", MediaType.APPLICATION_JSON_VALUE);
 		header.set("Authorization", authHeader);
 		
-		HttpEntity<MultiValueMap<String, String>> data = new HttpEntity<>(formData, header);	
-		ResponseEntity<String> response = rest.exchange(url, HttpMethod.POST, data, String.class);
+		HttpEntity<MultiValueMap<String, String>> data = new HttpEntity<>(formData, header);
+		JSONObject ret = new JSONObject();
 		
-		//System.out.println(rest.exchange(url, HttpMethod.POST, data, String.class));
+		try
+		{
+			ResponseEntity<String> response = rest.exchange(url, HttpMethod.POST, data, String.class);
+			JSONObject temp = new JSONObject(response.getBody());
+			
+			ret.put("isAuthenticated", true);
+			ret.put("bearerToken", temp.get("access_token"));
+			ret.put("errorMessage", "NULL");
+		}
 		
-		/*System.out.println(response.getBody());
-		System.out.println(response.getStatusCodeValue());*/
+		catch(Exception e)
+		{
+			String s = e.getMessage().substring(6, e.getMessage().length());
+			JSONArray temp1 = new JSONArray(s);
+			
+			ret.put("isAuthenticated", false);
+			ret.put("bearerToken", "NULL");
+			ret.put("errorMessage",temp1.get(0));
+		}
 		
-		return response.getBody();
+		
+		return ret.toString();
 	}
 
 }
