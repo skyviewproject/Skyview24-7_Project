@@ -6,7 +6,7 @@
     min-height: 100vh;
     height: auto;
     padding-bottom: 80px;
-    background-color: rgb(141,110,99);
+    background-color: #FFAB91;
     padding-top: 150px;
 }
 
@@ -26,7 +26,7 @@
     min-height: 300px;
     height: auto;
     padding-bottom: 15px;
-    background-color: rgb(121,85,72);
+    background-color: white;
     box-shadow: 2px 2px 5px black;
     border-radius: 5px;
 }
@@ -76,7 +76,7 @@
     font-family: 'Roboto', sans-serif;
     letter-spacing: 1px;
     text-align: justify;
-    color: white;
+    color: black;
     line-height: 40px;
     font-weight: normal;
     font-size: 22px;
@@ -107,26 +107,29 @@
 
 .wraperprofile .containerprofile .card .btnholder a #updt
 {
-    background-color: rgb(190, 136, 10);
+    background-color: transparent;
+    border: 3px solid #F4511E;
+    color: #F4511E;
 }
 
 .wraperprofile .containerprofile .card .btnholder a #updt:hover
 {
     cursor: pointer;
-    background-color: rgb(141, 104, 18);
+    margin-left: 3px;
     transition: 500ms ease-in-out;
 }
 
 .wraperprofile .containerprofile .card .btnholder #lgot
 {
     margin-top: 15px;
-    background-color: rgb(189, 22, 22);
+    background-color: #F4511E;
+    
 }
 
 .wraperprofile .containerprofile .card .btnholder #lgot:hover
 {
     cursor: pointer;
-    background-color: rgb(136, 16, 16);
+    margin-left: 3px;
     transition: 500ms ease-in-out;
 }
 

@@ -4,7 +4,7 @@ nav
 {
     width: 20%;
     height: 100vh;
-    background-color: rgb(78,52,46);
+    background-color: #F4511E;
     position: fixed;
     z-index: 10;
     overflow: scroll;
@@ -89,12 +89,12 @@ nav ul li button
     color: white;
     font-size: 20px;
     background-color: rgb(189, 22, 22);
+    box-shadow: 2px 2px 5px black;
 }
 
 nav ul li button:hover
 {
     cursor: pointer;
-    background-color: rgb(136, 16, 16);
 }
 
 @media only screen and (max-width: 900px)

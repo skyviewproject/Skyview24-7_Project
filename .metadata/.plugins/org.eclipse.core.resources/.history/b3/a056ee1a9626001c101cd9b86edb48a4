@@ -53,11 +53,11 @@ public class OauthLoginService
 		catch(Exception e)
 		{
 			String s = e.getMessage().substring(6, e.getMessage().length());
-			JSONArray temp = new JSONArray(s);
+			JSONArray temp1 = new JSONArray(s);
 			
 			ret.put("isAuthenticated", false);
 			ret.put("bearerToken", "NULL");
-			ret.put("errorMessage",temp.get(0));
+			ret.put("errorMessage",temp1.get(0));
 		}
 		
 		

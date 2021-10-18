@@ -204,9 +204,7 @@ class UpdateProfile extends Component
                     
                     <div class="containerform">
                         <div class="formholder">
-                            <div class="imghlder">
-                                <img src={Formbg} alt="formbg" srcset="" />
-                            </div>
+                            
 
                             <div class="inpthlder">
                                 <form>
@@ -217,7 +215,7 @@ class UpdateProfile extends Component
                                     <input type="text" name="eml" id="eml" onChange={this.changeEmailId} value={this.state.Emailid}/><br />
 
                                     <label for="mbl">Mobile No: </label><br />
-                                    <input type="text" name="mbl" id="mbl" onChange={this.changeMobileno} value={this.state.MobileNo}/>
+                                    <input type="text" name="mbl" id="mbl" onChange={this.changeMobileno} value={this.state.MobileNo}/><br />
 
                                     <label for="age">Your Age: </label><br />
                                     <input type="number" name="age" id="age"  onChange={this.changeUserAge} value={this.state.UserAge}/><br />
@@ -226,7 +224,7 @@ class UpdateProfile extends Component
                                     <input type="text" name="usrjb" id="usrjb" onChange={this.changeUserJob} value={this.state.UserJob}/><br />
 
                                     <label for="pswd">Your Password: </label><br />
-                                    <input type="password" onChange={this.changePassword} id="pswd" name="pswd" required/>
+                                    <input type="password" onChange={this.changePassword} id="pswd" name="pswd" required/><br />
 
                                     <label for="role">Role: </label><br />
                                     <select name="role" id="role" value={this.state.UserRole} disabled>
