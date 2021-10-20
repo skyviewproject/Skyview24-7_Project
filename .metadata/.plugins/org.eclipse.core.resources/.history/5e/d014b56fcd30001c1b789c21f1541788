@@ -1,0 +1,28 @@
+package com.example.skyview.Services;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.example.skyview.Model.TodoModel;
+import com.example.skyview.Repo.TodoRepo;
+
+public class TodoService 
+{
+	@Autowired
+	TodoRepo repo;
+	
+	public boolean addTodo(TodoModel model)
+	{
+		repo.save(model);
+		return true;
+	}
+	
+	public boolean updateTodo(long tId, TodoModel prev)
+	{
+		TodoModel updated = repo.findById(tId).get();
+		updated.setTodoName(prev.getTodoName());
+		updated.setTodoTime(prev.getTodoTime());
+		repo.save(updated);
+		
+		return true;
+	}
+
+}

@@ -1,0 +1,5 @@
+package com.example.skyview.Repo;
+
+public interface IncomeRepo {
+
+}

@@ -4,7 +4,7 @@ import "../ViewTicketsAndResolve/Style.css";
 import SesssionService from '../SessionManagement/SesssionService';
 import swal from 'sweetalert';
 
-export class TicketAndResolve extends Component {
+class TicketAndResolve extends Component {
     constructor(props) {
         super(props)
     

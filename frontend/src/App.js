@@ -45,6 +45,8 @@ import AddInvoicepage from './AddInvoice/AddInvoicepage';
 import ViewandResolveTickets from './ViewTicketsAndResolve/TicketAndResolve';
 import AddFamilyPage from './AddFamily/AddFamilyPage';
 import AddorUpdateFamilyPage from './AddorViewFamily/AddorViewFamilyPage';
+import TodoList from './TodoList/TodoList';
+import IncomeList from "./IncomePage/IncomePage";
 import Unauthorized from "./ErrorPages/401";
 import Forbidden from "./ErrorPages/403";
 import Notfound from "./ErrorPages/404";
@@ -101,6 +103,8 @@ function App() {
           <Route exact path='/addnewinvoicebyadmin' component={AddInvoicepage}></Route>
 
           <Route exact path='/resolvetickets' component={ViewandResolveTickets}></Route>
+          <Route exact path='/todolist' component={TodoList}></Route>
+          <Route exact path='/incomes' component={IncomeList}></Route>
 
           <Route exact path='/unauthorized' component={Unauthorized}></Route>
           <Route exact path='/forbidden' component={Forbidden}></Route>

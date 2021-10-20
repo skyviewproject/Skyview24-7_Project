@@ -92,14 +92,11 @@ class UpdateCarPage extends Component
                 })
                 .catch((error) =>
                 {
-                    if(error != undefined)
-                    {
-                        swal({
-                            title: "Error",
-                            text: `${error}`,
-                            icon: "error",
-                        });
-                    }
+                    swal({
+                        title: "Error",
+                        text: `${error}`,
+                        icon: "error",
+                    });
                 })
             } else {
               swal("Updating Member Aborted!");

@@ -1,0 +1,27 @@
+package com.example.skyview.Services;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import com.example.skyview.Model.IncomeModel;
+import com.example.skyview.Repo.IncomeRepo;
+
+@Service
+public class IncomeService 
+{
+	@Autowired
+	IncomeRepo repo;
+	
+	public boolean addIncomeForMonth(IncomeModel income)
+	{
+		repo.save(income);
+		return true;
+	}
+	
+	public boolean updateIncomeForMonth(long Iid, IncomeModel prev)
+	{
+		IncomeModel updated = repo.findById(Iid).get();
+		updated.setIncomeAmount(prev.getIncomeAmount());
+		repo.save(updated);
+		
+		return true;
+	}
+}

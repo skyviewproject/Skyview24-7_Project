@@ -130,6 +130,8 @@ class NavBar extends Component
                         <ul>
                             <li><a href="/home"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
                             <li><a href="/resolvetickets"><i class="fa fa-ticket" aria-hidden="true"></i> Tickets</a></li>
+                            <li><a href="/todolist"><i class="fa fa-table" aria-hidden="true"></i> Todo List</a></li>
+                            <li><a href="/incomes"><i class="fa fa-money" aria-hidden="true"></i> Revenue</a></li>
                             <li><a href="/groupchat"><i class="fa fa-comments" aria-hidden="true"></i> Group Chat</a></li>
                             <li><a href="/myprofile"><i class="fa fa-user" aria-hidden="true"></i> My Profile</a></li>
                             <li><button onClick={this.logOut}>Logout Now <i class="fa fa-sign-out" aria-hidden="true"></i></button></li>     

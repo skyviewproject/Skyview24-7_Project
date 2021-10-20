@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.wrappermytodolist
+{
+    width: 100%;
+    height: 100vh;
+    padding-bottom: 40px;
+}
+
+.wrappermytodolist .cardholder
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrappermytodolist .cardholder .card
+{
+    width: 35%;
+    height: 75vh;
+    overflow: scroll;
+    background-color: brown;
+    margin-top: 10vh;
+    padding-bottom: 25px;
+    border-radius: 10px;
+}
+
+.wrappermytodolist .cardholder .card::-webkit-scrollbar
+{
+    width: 0;
+}
+
+.wrappermytodolist .cardholder .card .btnhldr
+{
+    background-color: aqua;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 60px;
+    padding-right: 10px;
+}
+
+.wrappermytodolist .cardholder .card .btnhldr h3
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    padding-left: 10px;
+    padding-right: 30px;
+}
+
+.wrappermytodolist .cardholder .card .btnhldr button
+{
+    width: 150px;
+    height: 40px;
+    border-radius: 50px;
+    margin-left: 5px;
+    border: none;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+}
+
+.wrappermytodolist .cardholder .card .listhldr
+{
+    padding: 5px;
+}
+
+.wrappermytodolist .cardholder .card .listhldr .lists
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 3px;
+    margin-top: 10px;
+}
+
+.wrappermytodolist .cardholder .card .listhldr #line
+{
+    width: 90%;
+    height: 5px;
+    background-color: black;
+}
+
+.wrappermytodolist .cardholder .card .listhldr #done
+{
+    background-color: gray;
+    pointer-events: none;
+}
+
+.wrappermytodolist .cardholder .card .listhldr #done i
+{
+    font-size: 20px;
+    color: rgb(58, 172, 58);
+    margin-right: 5px;
+}
+
+.wrappermytodolist .cardholder .card .listhldr input
+{
+    height: 18px;
+    width: 18px;
+}
+
+.wrappermytodolist .cardholder .card .listhldr h5
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.wrappermytodolist .cardholder .card .listhldr #undone
+{
+    background-color: blue;
+}
+
+
+@media only screen and (max-width: 900px)
+{
+    .wrappermytodolist .cardholder .card
+    {
+        width: 70%;
+        height: 65vh;
+    }
+}
+
+
+
+
+@media only screen and (max-width: 480px)
+{
+    .wrappermytodolist .cardholder .card
+    {
+        width: 95%;
+        height: 75vh;
+    }
+
+    .wrappermytodolist .cardholder .card .btnhldr button
+    {
+        width: 120px;
+        height: 35px;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,12 @@
+package com.example.skyview.Services;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import com.example.skyview.Model.IncomeModel;
+import com.example.skyview.Repo.IncomeRepo;
+
+@Service
+public class IncomeService 
+{
+	@Autowired
+	IncomeRepo repo;
+}
