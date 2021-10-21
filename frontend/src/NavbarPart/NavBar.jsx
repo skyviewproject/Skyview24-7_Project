@@ -35,7 +35,7 @@ class NavBar extends Component
                 api.logoutUserAndAndDestroySession();
                 window.location.href = "/login"
             } else {
-              swal("Thaks for Staing with Us");
+              swal("Thaks for Staying with Us");
             }
           });
         

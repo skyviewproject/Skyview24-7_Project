@@ -92,11 +92,14 @@ class UpdateCarPage extends Component
                 })
                 .catch((error) =>
                 {
-                    swal({
-                        title: "Error",
-                        text: `${error}`,
-                        icon: "error",
-                    });
+                    if(error != undefined)
+                    {
+                        swal({
+                            title: "Error",
+                            text: `${error}`,
+                            icon: "error",
+                        });
+                    }
                 })
             } else {
               swal("Updating Member Aborted!");
@@ -131,9 +134,7 @@ class UpdateCarPage extends Component
                         
                         <div class="containerform">
                             <div class="formholder">
-                                <div class="imghlder">
-                                    <img src={Formbg} alt="formbg" srcset="" />
-                                </div>
+                                
         
                                 <div class="inpthlder">
                                 <form>

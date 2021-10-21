@@ -50,9 +50,9 @@ class IncomePage extends Component
                         fill: true,
                         pointRadius: 5,
                         tension: 0.2,
-                        pointBackgroundColor: "rgba(0,0,0,1)",
-                        backgroundColor: "rgba(0,0,0,0.2)",
-                        borderColor: "rgba(0,0,0,1)",
+                        pointBackgroundColor: "rgba(244,81,30,1)",
+                        backgroundColor: "rgba(255,171,145,0.2)",
+                        borderColor: "rgba(244,81,30,1)",
                     }
 
                 ]}

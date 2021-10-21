@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import backendService from "./Service";
-import "../TodoList/Style.css";
+import "./Style.css";
 import SesssionService from '../SessionManagement/SesssionService';
 import swal from 'sweetalert';
 
@@ -231,8 +231,8 @@ class TodoList extends Component
                         <div class="card">
                             <div class="btnhldr">
                                 <h3>Manage Todolist</h3>
-                                <button onClick={this.addTodo}>Add Todo <i class="fa fa-plus" aria-hidden="true"></i></button>
-                                <button onClick={this.clearAllTodo}>Clear All <i class="fa fa-trash" aria-hidden="true"></i></button>
+                                <button onClick={this.addTodo}> <i class="fa fa-plus" aria-hidden="true"></i></button>
+                                <button onClick={this.clearAllTodo}> <i class="fa fa-trash" aria-hidden="true"></i></button>
                             </div>
                             <div class="listhldr">
                                {

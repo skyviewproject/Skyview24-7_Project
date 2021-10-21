@@ -96,7 +96,7 @@
 .wrapperaddorupdateInvoice .cardholder .card .btnhldr #vwupt:hover
 {
     cursor: pointer;
-    background-color: rgb(141, 104, 18);
+   
     transition: 500ms ease-in-out;
 }
 

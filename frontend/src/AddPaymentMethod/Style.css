@@ -5,15 +5,16 @@
     padding-top: 10vh;
     height: auto;
     min-height: 90vh;
-    padding-bottom: 30px;
+    padding-bottom: 60px;
     width: 100%;
-    background-color: rgb(141,110,99);
+    background-image:  linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(../Images/bg2.jpg);
 }
 
 .wrapperaddpaymethodform h2
 {
     font-size: 30px;
     padding-left: 40px;
+    color:white;
 }
 
 .wrapperaddpaymethodform .containerform
@@ -26,31 +27,21 @@
 .wrapperaddpaymethodform .containerform .formholder
 {
     width: 40%;
-    height: 400px;
+    height: auto;
     display: flex;
     flex-direction: row;
-    background-color: rgb(121,85,72);
+    background-color: white;
     border-radius: 5px;
     margin-top: 5vh;
     box-shadow: 2px 2px 5px black;
-}
-
-.wrapperaddpaymethodform .containerform .formholder .imghlder
-{
-    flex: 40%;
-}
-
-.wrapperaddpaymethodform .containerform .formholder .imghlder img
-{
-    height: 400px;
-    width: 100%;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    padding-bottom: 30px;
+    overflow: hidden;
 }
 
 .wrapperaddpaymethodform .containerform .formholder .inpthlder
 {
     flex: 60%;
+    padding-top: 30px;
 }
 
 .wrapperaddpaymethodform .containerform .formholder .inpthlder form
@@ -60,7 +51,7 @@
 
 .wrapperaddpaymethodform .containerform .formholder .inpthlder form label
 {
-    color: white;
+    color: black;
     font-family: 'Roboto', sans-serif;
     font-size: 23px;
 }
@@ -68,54 +59,76 @@
 .wrapperaddpaymethodform .containerform .formholder .inpthlder form input
 {
     height: 30px;
-    width: 95%;
+    width: 80%;
     margin-top: 7px;
     border-radius: 50px;
     border: none;
+    background-color: rgb(201, 191, 191);
     outline: none;
     padding-left: 10px;
     margin-bottom: 15px;
+    font-size: 17px;
+}
+
+.wrapperaddpaymethodform .containerform .formholder .inpthlder form input[type = password]
+{
+    background-color: rgb(201, 191, 191);
 }
 
 .wrapperaddpaymethodform .containerform .formholder .inpthlder form  select
 {
     height: 30px;
-    width: 97%;
+    width: 82%;
     margin-top: 5px;
     border-radius: 50px;
     border: none;
     outline: none;
     padding-left: 10px;
     margin-bottom: 15px;
+    background-color: rgb(201, 191, 191);
     font-family: 'Roboto', sans-serif;
     font-size: 17px;
-}
-
-.wrapperaddpaymethodform .containerform .formholder .inpthlder form h4
-{
-    margin: 0;
-    padding-top: 5px;
-    text-align: center;
-    color: red;
 }
 
 .wrapperaddpaymethodform .containerform .formholder .inpthlder form button
 {
     margin-top: 30px;
-    width: 97%;
+    width: 190px;
     height: 45px;
     border-radius: 50px;
     border: none;
     outline: none;
-    font-size: 20px;
-    background-color: rgb(46,125,50);
+    font-size: 17px;
+    background-color: #F4511E;
     color: white;
 }
 
 .wrapperaddpaymethodform .containerform .formholder .inpthlder form button:hover
 {
     cursor: pointer;
-    background-color: rgb(14, 83, 17);
+    margin-left: 5px;
+    transition: 500ms ease-in-out;
+}
+
+.wrapperaddpaymethodform .containerform .formholder .inpthlder h2
+{
+    font-size: 22px;
+    padding-right: 10px;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 40px;
+}
+
+.wrapperaddpaymethodform .containerform .formholder .inpthlder h2 a
+{
+    font-size: 30px;
+    color: #F4511E;
+    text-decoration: none;
+    text-shadow: 2px 2px 5px black;
+}
+
+.wrapperaddpaymethodform .containerform .formholder .inpthlder h2 a:hover
+{
+    font-size: 31px;
     transition: 500ms ease-in-out;
 }
 
@@ -135,6 +148,11 @@
         padding-bottom: 70px;
     }
 
+    .wrapperaddpaymethodform h2
+    {
+        font-size: 25px;
+    }
+
     .wrapperaddpaymethodform .containerform .formholder .imghlder
     {
         flex: 30%;
@@ -149,12 +167,16 @@
     {
         width: 90%;
         flex-direction: column;
-        height: 550px;
     }
 
     .wrapperaddpaymethodform .containerform .formholder .imghlder img
     {
         height: 150px;
+    }
+
+    .wrapperaddpaymethodform .containerform h2
+    {
+        font-size: 24px;
     }
  
     .wrapperaddpaymethodform .containerform .formholder .imghlder img
@@ -165,3 +187,4 @@
     }
     
 }
+

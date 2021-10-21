@@ -7,7 +7,7 @@
     min-height: 90vh;
     padding-bottom: 30px;
     width: 100%;
-    background-color: rgb(141,110,99);
+    background-color: #FFAB91;
 }
 
 .wrapperloginform .containerform
@@ -24,7 +24,7 @@
     height: auto;
     display: flex;
     flex-direction: column;
-    background-color: rgb(121,85,72);
+    background-color: white;
     border-radius: 5px;
     margin-top: 5vh;
     box-shadow: 2px 2px 5px black;
@@ -60,7 +60,7 @@
 
 .wrapperloginform .containerform .formholder .inpthlder form label
 {
-    color: white;
+    color: black;
     font-family: 'Roboto', sans-serif;
     font-size: 23px;
 }
@@ -71,10 +71,13 @@
     width: 90%;
     margin-top: 7px;
     border-radius: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
     border: none;
     outline: none;
     padding-left: 10px;
     margin-bottom: 15px;
+    background-color: rgb(201, 191, 191);
 }
 
 .wrapperloginform .containerform .formholder .inpthlder form  select
@@ -100,14 +103,14 @@
     border: none;
     outline: none;
     font-size: 20px;
-    background-color: rgb(46,125,50);
+    background-color: #F4511E;
     color: white;
 }
 
 .wrapperloginform .containerform .formholder .inpthlder form button:hover
 {
     cursor: pointer;
-    background-color: rgb(14, 83, 17);
+    margin-left: 3px;
     transition: 500ms ease-in-out;
 }
 
@@ -133,7 +136,7 @@
 {
     font-family: 'Roboto', sans-serif;
     font-size: 19px;
-    color: white;
+    color: black;
     padding-left: 2px;
 }
 
@@ -142,9 +145,8 @@
    margin-left: 10%;
    font-family: 'Roboto', sans-serif;
    font-size: 22px;
-   color: white;
-   text-shadow: 2px 2px 5px black;
-   font-weight: lighter;
+   color: black;
+   font-weight: bold;
 }
 
 .wrapperloginform .containerform .formholder .inpthlder .linkhold .subdiv1 h3:hover
@@ -172,7 +174,7 @@
 .wrapperloginform .containerform .formholder .inpthlder .linkhold .subdiv2 h2 a
 {
     font-size: 30px;
-    color: rgb(46,125,50);
+    color: #F4511E;
     text-decoration: none;
     text-shadow: 2px 2px 5px black;
 }
@@ -187,7 +189,7 @@
 {
     .wrapperloginform .containerform .formholder
     {
-        width: 70%;
+        width: 80%;
     }
 }
 

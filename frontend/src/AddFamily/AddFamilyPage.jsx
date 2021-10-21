@@ -152,9 +152,7 @@ class AddFamilyPage extends Component
                         
                         <div class="containerform">
                             <div class="formholder">
-                                <div class="imghlder">
-                                    <img src={Formbg} alt="formbg" srcset="" />
-                                </div>
+                                
         
                                 <div class="inpthlder">
                                     <form>

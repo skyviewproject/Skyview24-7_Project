@@ -4,7 +4,7 @@ nav
 {
     width: 20%;
     height: 100vh;
-    background-color: #F4511E;
+    background-color: #ac4617;
     position: fixed;
     z-index: 10;
     overflow: scroll;
@@ -106,8 +106,8 @@ nav ul li button:hover
 
     nav ul li
     {
-        padding-top: 35px;
-        padding-bottom: 35px;
+        padding-top: 25px;
+        padding-bottom: 25px;
     }
 }
 

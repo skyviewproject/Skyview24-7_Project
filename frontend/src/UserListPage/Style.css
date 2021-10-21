@@ -35,7 +35,7 @@
 
 .wrapperUserList .listholder table thead th
 {
-    background-color: #F4511E;
+    background-color: #cc512c;
     color: white;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -57,7 +57,7 @@
 {
     width: 60%;
     height: 35px;
-    background-color: #FF8A65;
+    background-color: #ce694a;
     border-radius: 50px;
     outline: none;
     border: none;

@@ -7,7 +7,7 @@
     min-height: 90vh;
     padding-bottom: 60px;
     width: 100%;
-    background-color: rgb(141,110,99);
+    background-image:  linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(../Images/bg2.jpg);
 }
 
 .wrappersignupform h2
@@ -29,7 +29,7 @@
     height: auto;
     display: flex;
     flex-direction: row;
-    background-color: rgb(121,85,72);
+    background-color: white;
     border-radius: 5px;
     margin-top: 5vh;
     box-shadow: 2px 2px 5px black;
@@ -37,22 +37,10 @@
     overflow: hidden;
 }
 
-.wrappersignupform .containerform .formholder .imghlder
-{
-    flex: 40%;
-}
-
-.wrappersignupform .containerform .formholder .imghlder img
-{
-    height: 150%;
-    width: 100%;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-}
-
 .wrappersignupform .containerform .formholder .inpthlder
 {
     flex: 60%;
+    padding-top: 30px;
 }
 
 .wrappersignupform .containerform .formholder .inpthlder form
@@ -62,7 +50,7 @@
 
 .wrappersignupform .containerform .formholder .inpthlder form label
 {
-    color: white;
+    color: black;
     font-family: 'Roboto', sans-serif;
     font-size: 23px;
 }
@@ -70,25 +58,33 @@
 .wrappersignupform .containerform .formholder .inpthlder form input
 {
     height: 30px;
-    width: 95%;
+    width: 80%;
     margin-top: 7px;
     border-radius: 50px;
     border: none;
+    background-color: rgb(201, 191, 191);
     outline: none;
     padding-left: 10px;
     margin-bottom: 15px;
+    font-size: 17px;
+}
+
+.wrappersignupform .containerform .formholder .inpthlder form input[type = password]
+{
+    background-color: rgb(201, 191, 191);
 }
 
 .wrappersignupform .containerform .formholder .inpthlder form  select
 {
     height: 30px;
-    width: 97%;
+    width: 82%;
     margin-top: 5px;
     border-radius: 50px;
     border: none;
     outline: none;
     padding-left: 10px;
     margin-bottom: 15px;
+    background-color: rgb(201, 191, 191);
     font-family: 'Roboto', sans-serif;
     font-size: 17px;
 }
@@ -96,20 +92,20 @@
 .wrappersignupform .containerform .formholder .inpthlder form button
 {
     margin-top: 30px;
-    width: 97%;
+    width: 190px;
     height: 45px;
     border-radius: 50px;
     border: none;
     outline: none;
-    font-size: 20px;
-    background-color: rgb(46,125,50);
+    font-size: 17px;
+    background-color: #F4511E;
     color: white;
 }
 
 .wrappersignupform .containerform .formholder .inpthlder form button:hover
 {
     cursor: pointer;
-    background-color: rgb(14, 83, 17);
+    margin-left: 5px;
     transition: 500ms ease-in-out;
 }
 
@@ -124,7 +120,7 @@
 .wrappersignupform .containerform .formholder .inpthlder h2 a
 {
     font-size: 30px;
-    color: rgb(46,125,50);
+    color: #F4511E;
     text-decoration: none;
     text-shadow: 2px 2px 5px black;
 }
@@ -139,18 +135,7 @@
 {
     .wrappersignupform .containerform .formholder
     {
-        width: 70%;
-    }
-
-    .wrappersignupform .containerform .formholder .inpthlder h2 a
-    {
-        font-size: 25px;
-    }
-
-    .wrappersignupform .containerform .formholder .inpthlder h2
-    {
-        font-size: 20px;
-        padding-right: 5px;
+        width: 80%;
     }
 }
 
@@ -183,7 +168,6 @@
         flex-direction: column;
     }
 
-
     .wrappersignupform .containerform .formholder .imghlder img
     {
         height: 150px;
@@ -202,3 +186,4 @@
     }
     
 }
+

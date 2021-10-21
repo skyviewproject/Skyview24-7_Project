@@ -159,9 +159,7 @@ class UpdateHelperspage extends Component {
                         <h2><i class="fa fa-file-text" aria-hidden="true"></i> Update Help Details</h2>
                         <div class="containerform">
                             <div class="formholder">
-                                <div class="imghlder">
-                                    <img src={Formbg} alt="formbg" srcset="" />
-                                </div>
+                                
 
                                 <div class="inpthlder">
                                     <form>
