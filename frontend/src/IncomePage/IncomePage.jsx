@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import backendService from "./Service";
 import "../IncomePage/Style.css";
 import SesssionService from '../SessionManagement/SesssionService';
+import { Line } from 'react-chartjs-2';
 import swal from 'sweetalert';
 
 class IncomePage extends Component 
@@ -10,13 +11,14 @@ class IncomePage extends Component
         super(props)
     
         this.state = {
-            IncomeList: [],
             IncomeTillMonth: 0,
             IncomeOfMonth: 0,
             IncreasedorDecreased: 0,
             MonthIncome: 0,
             MonthIp: '0',
-            Month: new Date().getMonth().toString()
+            GraphDataSet: {},
+            Month: new Date().getMonth().toString(),
+            
         }
 
         this.changeAmount = this.changeAmount.bind(this);
@@ -28,14 +30,35 @@ class IncomePage extends Component
     componentDidMount()
     {
         const api = new backendService();
+        let chartData = []
 
         api.getAllIncomes().then((res) => 
         {
-            this.setState(
-                {
-                    IncomeList: res.data
-                }
-            );
+            const val = res.data;
+            val.forEach(income =>
+            {
+                chartData.push(income.incomeAmount);
+            });
+
+            this.setState({
+                GraphDataSet: {
+                    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun","July", "Aug", "Sept", "Oct", "Nov", "Dec"],
+                    datasets: [
+                    {
+                        label: "Revenue Graph Of "+new Date().getFullYear().toString(),
+                        data: chartData,
+                        fill: true,
+                        pointRadius: 5,
+                        tension: 0.2,
+                        pointBackgroundColor: "rgba(0,0,0,1)",
+                        backgroundColor: "rgba(0,0,0,0.2)",
+                        borderColor: "rgba(0,0,0,1)",
+                    }
+
+                ]}
+                
+            })
+                
         })
         .catch((error) =>
         {
@@ -54,6 +77,7 @@ class IncomePage extends Component
         {
             console.log(error);
         })
+
     }
 
     changeAmount(event){this.setState({IncomeOfMonth: event.target.value});}
@@ -174,14 +198,14 @@ class IncomePage extends Component
                     <div class="wrapperincomepage">
                         <div class="mnhimn">
                             <form>
-                                <label for="month">Current Month: </label>
+                                <label for="month">Current Month: </label><br />
                                 <select name="month" id="month" value={this.state.Month} disabled>
                                     <option value="0">January</option>
                                     <option value="1">February</option>
                                     <option value="2">March</option>
                                     <option value="3">April</option>
                                     <option value="4">May</option>
-                                    <option value="5">Tune</option>
+                                    <option value="5">June</option>
                                     <option value="6">July</option>
                                     <option value="7">August</option>
                                     <option value="8">Septempber</option>
@@ -190,7 +214,7 @@ class IncomePage extends Component
                                     <option value="11">December</option>
                                 </select><br />
 
-                                <label for="amount">Amount: </label>
+                                <label for="amount">Revenue Amount: </label><br />
                                 <input type="number" name="amount" id="amount" onChange={this.changeAmount} value={parseInt(this.state.IncomeOfMonth)}/><br />
                                 <button onClick={this.addIncomeForMonth}>Change Revenue</button><br />
                             </form>
@@ -206,39 +230,60 @@ class IncomePage extends Component
                                         <option value="2">March</option>
                                         <option value="3">April</option>
                                         <option value="4">May</option>
-                                        <option value="5">Tune</option>
+                                        <option value="5">June</option>
                                         <option value="6">July</option>
                                         <option value="7">August</option>
                                         <option value="8">Septempber</option>
                                         <option value="9">October</option>
                                         <option value="10">November</option>
                                         <option value="11">December</option>
-                                    </select>
+                                    </select><br />
 
                                     <button onClick={this.getRevenueData}>Get Revenue</button>
                                 </form>
                             </div>
 
+                            <h3>Get All Data Here: </h3>
+
                             <div class="dtaprt">
-                                <div id="subdiv1">
+
+                                <div id="subdiv">
+                                    <h5>Income in Month: </h5>
                                     <h3>{this.state.MonthIncome}</h3>
-                                    <h5>Income in Month</h5>
                                 </div>
 
-                                <div id="subdiv2">
+                                <div id="subdiv">
+                                    <h5>Income Till Month: </h5>
                                     <h3>{this.state.IncomeTillMonth}</h3>
-                                    <h5>Income Till Month</h5>
                                 </div>
 
-                                <div id="subdiv3">
-                                    <h3>{this.state.IncreasedorDecreased}</h3>
-                                    <h5>Increased/Decreased By</h5>
+                                <div id="subdiv">
+                                    <h5>Increased/Decreased By: </h5>
+                                    {
+                                        (
+                                            () =>
+                                            {
+                                                if(this.state.IncreasedorDecreased >= 0)
+                                                {
+                                                    return(<h3>{this.state.IncreasedorDecreased} <i class="fa fa-long-arrow-up" aria-hidden="true" id="up"></i></h3>);
+                                                    
+                                                }
+
+                                                else
+                                                {
+                                                    return(<h3>{0 - this.state.IncreasedorDecreased} <i class="fa fa-long-arrow-down" aria-hidden="true" id="down"></i></h3>);
+                                                }
+                                            }
+                                        )()
+                                    }
                                 </div>
                             </div>
                         </div>
 
                         <div class="grphld">
-
+                            <div class="graph">
+                                <Line data={this.state.GraphDataSet} />
+                            </div>
                         </div>
                     </div>
                 

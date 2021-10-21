@@ -5,7 +5,7 @@
     width: 100%;
     min-height: 100vh;
     height: auto;
-    padding-bottom: 40px;
+    padding-bottom: 60px;
 }
 
 .wrapperincomepage .mnhimn
@@ -13,32 +13,238 @@
     padding-top: 15vh;
     width: 60%;
     height: auto;
-    margin-left: 50px;
+    margin-left: 100px;
 }
 
 .wrapperincomepage .mnhimn form
 {
     width: 100%;
     height: 90%;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    padding-top: 10px;
+    padding: 20px;
     background-color: rosybrown;
+    border-radius: 10px;
     
 }
 
 .wrapperincomepage .mnhimn form label
 {
+    color: white;
     font-family: 'Roboto', sans-serif;
-    font-size: 22px;
+    font-size: 23px;
+}
+
+.wrapperincomepage .mnhimn form input
+{
+    height: 30px;
+    width: 90%;
+    margin-top: 7px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    margin-bottom: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+.wrapperincomepage .mnhimn form select
+{
+    height: 30px;
+    width: 91%;
+    margin-top: 5px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    margin-bottom: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    color: black;
+}
+
+.wrapperincomepage .mnhimn form button
+{
+    margin-top: 20px;
+    width: 165px;
+    height: 45px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background-color: rgb(46,125,50);
+    color: white;
+}
+
+.wrapperincomepage .mnhimn form button:hover
+{
+    cursor: pointer;
 }
 
 .wrapperincomepage .imndet
 {
     width: 60%;
     height: auto;
+    padding: 20px;
     margin-left: 50px;
     background-color: rosybrown;
     margin-top: 5vh;
+    border-radius: 10px;
+    margin-left: 100px;
+}
+
+.wrapperincomepage .imndet .frmprt
+{
+    padding-top: 0px;
+}
+
+.wrapperincomepage .imndet .frmprt form
+{
+    width: 100%;
+    height: 90%;
     padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.wrapperincomepage .imndet .frmprt form label
+{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 23px;
+}
+
+.wrapperincomepage .imndet .frmprt form select
+{
+    height: 30px;
+    width: 91%;
+    margin-top: 5px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    margin-bottom: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    color: black;
+}
+
+.wrapperincomepage .imndet .frmprt form button
+{
+    margin-top: 20px;
+    width: 165px;
+    height: 45px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background-color: rgb(46,125,50);
+    color: white;
+}
+
+.wrapperincomepage .imndet .frmprt form button:hover
+{
+    cursor: pointer;
+}
+
+.wrapperincomepage .dtaprt
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapperincomepage .dtaprt #subdiv
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.wrapperincomepage .dtaprt #subdiv h5
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+}
+
+.wrapperincomepage .dtaprt #subdiv h3
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    padding: 15px;
+    background-color: aquamarine;
+    margin-left: 5px;
+    border-radius: 5px;
+}
+
+.wrapperincomepage .dtaprt #subdiv #up
+{
+    color: green;
+}
+
+.wrapperincomepage .dtaprt #subdiv #down
+{
+    color: red;
+}
+
+.wrapperincomepage .grphld
+{
+    margin-top: 5vh;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 5%;
+}
+
+.wrapperincomepage .grphld .graph
+{
+    width: 100%;
+    background-color: aqua;
+    border-radius: 10px;
+
+}
+
+@media only screen and (max-width: 900px)
+{
+    .wrapperincomepage .mnhimn
+    {
+        padding-top: 10vh;
+        width: 70%;
+        margin-left: 50px;
+    }
+
+    .wrapperincomepage .imndet
+    {
+        width: 70%;
+        margin-left: 50px;
+    }
+
+}
+
+
+@media only screen and (max-width: 480px)
+{
+    .wrapperincomepage .mnhimn
+    {
+        padding-top: 10vh;
+        width: 80%;
+        margin-left: 7px;
+    }
+
+    .wrapperincomepage .imndet
+    {
+        width: 80%;
+        margin-left: 7px;
+    }
+
+    .wrapperincomepage .dtaprt #subdiv h5
+    {
+        font-size: 18px;
+    }
+
+    .wrapperincomepage .dtaprt #subdiv h3
+    {
+        font-size: 18px;
+        padding: 10px;
+    }
+
 }

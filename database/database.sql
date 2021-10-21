@@ -29,7 +29,7 @@ CREATE TABLE `cardetails_info` (
   `user_id` bigint(20) DEFAULT NULL,
   `car_brand` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`car_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,7 +38,7 @@ CREATE TABLE `cardetails_info` (
 
 LOCK TABLES `cardetails_info` WRITE;
 /*!40000 ALTER TABLE `cardetails_info` DISABLE KEYS */;
-INSERT INTO `cardetails_info` VALUES (1,'WB-07 7854','2 wheelers',2,'Yamaha'),(2,'WB-07 7654','2 wheelers',3,'honda'),(3,'WB-07 8654','4 wheelers',4,'BMW'),(5,'WB-07 5654','4 wheelers',4,'Maruti'),(8,'WB-04 9654','4 Wheeler',12,'Tata Yamaha');
+INSERT INTO `cardetails_info` VALUES (2,'WB-07 7654','2 wheelers',3,'honda'),(3,'WB-07 8654','4 wheelers',4,'BMW'),(5,'WB-07 5654','4 wheelers',4,'Maruti'),(8,'WB-04 9654','4 Wheeler',12,'Tata Yamaha'),(13,'WB-04 9654','3 Wheeler',2,'Honda');
 /*!40000 ALTER TABLE `cardetails_info` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -56,7 +56,7 @@ CREATE TABLE `chat_info` (
   `chat_ref` varchar(255) DEFAULT NULL,
   `chat_username` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`chat_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -65,7 +65,7 @@ CREATE TABLE `chat_info` (
 
 LOCK TABLES `chat_info` WRITE;
 /*!40000 ALTER TABLE `chat_info` DISABLE KEYS */;
-INSERT INTO `chat_info` VALUES (1,'Hello Vaibhab please take care of your Health','13:57:29 2021/08/28',NULL,'Sara Das'),(2,'Hello Vaibhab please take care of your Health','13:57:41 2021/08/28',NULL,'Sara Das'),(3,'Hello Abhishek please take care of your Health','14:02:19 2021/08/28',NULL,'Abhinav Roy'),(4,'Hello Anurag please take care of your Health','14:02:30 2021/08/28',NULL,'Abhinav Roy'),(5,'Hello Vaibhab please take care of your Health','14:03:49 2021/08/28','Hello Vaibhab please take care of your Health','Sara Das'),(6,'Hello Vaibhab please take care of your Health','14:04:53 2021/08/28','Hello Vaibhab please take care of your Health','Sara Das'),(7,'Hello Vaibhab please take care of your Health','14:04:59 2021/08/28','Hello Abhishek please take care of your Health','Sara Das'),(8,'Yes Vaibhab I, have taken the 1st dose of Vaccine','10:29:37 2021/09/13','Hello Vaibhab please take care of your Health','Sara Das'),(9,'Checking this at 16:49','16:49:21 2021/09/17','Hello Vaibhab please take care of your Health','Sara Das'),(10,'Sending chat at same time','16:49:47 2021/09/17','','Sara Das'),(11,'VSAP chat','18:50:51 2021/09/17','','Sara Das'),(12,'Replying with Chat','18:51:06 2021/09/17','VSAP chat','Sara Das'),(13,'Hello There','18:51:23 2021/09/17','Hello Vaibhab please take care of your Health','Sara Das'),(14,'Hi Sara','16:42:54 2021/09/18','Hello There','Arpan Mondal');
+INSERT INTO `chat_info` VALUES (1,'Hello Vaibhab please take care of your Health','13:57:29 2021/08/28',NULL,'Sara Das'),(2,'Hello Vaibhab please take care of your Health','13:57:41 2021/08/28',NULL,'Sara Das'),(3,'Hello Abhishek please take care of your Health','14:02:19 2021/08/28',NULL,'Abhinav Roy'),(4,'Hello Anurag please take care of your Health','14:02:30 2021/08/28',NULL,'Abhinav Roy'),(5,'Hello Vaibhab please take care of your Health','14:03:49 2021/08/28','Hello Vaibhab please take care of your Health','Sara Das'),(6,'Hello Vaibhab please take care of your Health','14:04:53 2021/08/28','Hello Vaibhab please take care of your Health','Sara Das'),(7,'Hello Vaibhab please take care of your Health','14:04:59 2021/08/28','Hello Abhishek please take care of your Health','Sara Das'),(8,'Yes Vaibhab I, have taken the 1st dose of Vaccine','10:29:37 2021/09/13','Hello Vaibhab please take care of your Health','Sara Das'),(9,'Checking this at 16:49','16:49:21 2021/09/17','Hello Vaibhab please take care of your Health','Sara Das'),(10,'Sending chat at same time','16:49:47 2021/09/17','','Sara Das'),(11,'VSAP chat','18:50:51 2021/09/17','','Sara Das'),(12,'Replying with Chat','18:51:06 2021/09/17','VSAP chat','Sara Das'),(13,'Hello There','18:51:23 2021/09/17','Hello Vaibhab please take care of your Health','Sara Das'),(14,'Hi Sara','16:42:54 2021/09/18','Hello There','Arpan Mondal'),(15,'Hii Everyone','14:01:41 2021/09/27','','Ritika Banerjee'),(16,'Sorry Arpan Sara is not present at this time','14:02:11 2021/09/27','Hi Sara','Ritika Banerjee'),(17,'HelloEveryOne','19:36:33 2021/10/05','','Anindita Karmakar'),(18,'hi, I am Admin','19:36:58 2021/10/05','Hii Everyone','Anindita Karmakar'),(19,'Now in Meeting','18:36:32 2021/10/06','','Abhinav Roy'),(20,'Repling chat','18:36:49 2021/10/06','Sorry Arpan Sara is not present at this time','Abhinav Roy');
 /*!40000 ALTER TABLE `chat_info` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -84,7 +84,7 @@ CREATE TABLE `dailyhelp_info` (
   `help_name` varchar(255) DEFAULT NULL,
   `help_type` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`help_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -93,7 +93,7 @@ CREATE TABLE `dailyhelp_info` (
 
 LOCK TABLES `dailyhelp_info` WRITE;
 /*!40000 ALTER TABLE `dailyhelp_info` DISABLE KEYS */;
-INSERT INTO `dailyhelp_info` VALUES (1,'39','7541230964','FeMale','Desy Doe','Housemaid'),(4,'69','7541830964','FeMale','Kanta Mitra','HouseMaid'),(6,'54','8965471123','Male','Ram Chandra','Driver'),(7,'29','6398741250','Male','Samir Rahaman','Electrician'),(8,'35','7845632120','Female','Somutree Barik','Cook');
+INSERT INTO `dailyhelp_info` VALUES (1,'39','7541230964','FeMale','Desy Doe','Housemaid'),(6,'54','8965471123','Male','Ram Chandra','Driver'),(7,'30','6398741250','Female','Samira Rahaman','Electrician'),(8,'35','7845632120','Female','Somutree Barik','Cook'),(9,'42','7541830964','Female','Sone Nmae','Cleaner');
 /*!40000 ALTER TABLE `dailyhelp_info` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -113,7 +113,7 @@ CREATE TABLE `family_info` (
   `member_age` int(11) DEFAULT NULL,
   `member_name` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`member_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -138,7 +138,7 @@ CREATE TABLE `helpassosication_info` (
   `helper_id` bigint(20) DEFAULT NULL,
   `resident_id` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`helpassosication_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -147,8 +147,33 @@ CREATE TABLE `helpassosication_info` (
 
 LOCK TABLES `helpassosication_info` WRITE;
 /*!40000 ALTER TABLE `helpassosication_info` DISABLE KEYS */;
-INSERT INTO `helpassosication_info` VALUES (2,1,2),(3,4,3),(5,2,5),(6,1,4),(9,4,12);
+INSERT INTO `helpassosication_info` VALUES (6,1,4),(9,4,12),(12,7,2);
 /*!40000 ALTER TABLE `helpassosication_info` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `income_info`
+--
+
+DROP TABLE IF EXISTS `income_info`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `income_info` (
+  `income_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `income_amount` int(11) DEFAULT NULL,
+  `income_month` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`income_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `income_info`
+--
+
+LOCK TABLES `income_info` WRITE;
+/*!40000 ALTER TABLE `income_info` DISABLE KEYS */;
+INSERT INTO `income_info` VALUES (1,12000,'0'),(2,10000,'1'),(3,15000,'2'),(4,14000,'3'),(5,17000,'4'),(6,15000,'5'),(7,16000,'6'),(8,12000,'7'),(9,10000,'8'),(10,10000,'9'),(11,0,'10'),(12,0,'11');
+/*!40000 ALTER TABLE `income_info` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -165,7 +190,7 @@ CREATE TABLE `invoice_info` (
   `invoice_amount_rupees` int(11) DEFAULT NULL,
   `invoice_reason` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`invoice_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -174,7 +199,7 @@ CREATE TABLE `invoice_info` (
 
 LOCK TABLES `invoice_info` WRITE;
 /*!40000 ALTER TABLE `invoice_info` DISABLE KEYS */;
-INSERT INTO `invoice_info` VALUES (5,'15/05/21',4,5000,'Salary For Maid');
+INSERT INTO `invoice_info` VALUES (5,'2021-09-27',4,5000,'Salary For Cook'),(8,'2021-10-06',2,5000,'Room Rent');
 /*!40000 ALTER TABLE `invoice_info` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -192,7 +217,7 @@ CREATE TABLE `mail_info` (
   `mail_header` varchar(255) DEFAULT NULL,
   `mail_sendingtime` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`mail_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -201,7 +226,7 @@ CREATE TABLE `mail_info` (
 
 LOCK TABLES `mail_info` WRITE;
 /*!40000 ALTER TABLE `mail_info` DISABLE KEYS */;
-INSERT INTO `mail_info` VALUES (1,'skyviewproject247@gmail.com','Hi Bihan,\n Please cleare the rent for this month as well as the payments of the maids within this week \n Thanking you, \n Admin, \n SkyView24*7','Reminder about Payment for August','java.text.SimpleDateFormat@115a0f60'),(2,'skyviewproject247@gmail.com','Hi Abhishek,\n Please cleare the rent for this month as well as the payments of the maids within this week \n Thanking you, \n Admin, \n SkyView24*7','Reminder about Payment for August','java.text.SimpleDateFormat@115a0f60'),(3,'skyviewproject247@gmail.com','Hi Sara Das Please note that Ticket rised at 09:29:58 2021/09/13 on Electricity Problem has been Resloved. Happy to Help \\n Thanking you, \\n SuperVisior Team, \\n SkyView24*7','Ticket Solved Confirmation','12:14:27 2021/09/14'),(4,'skyviewproject247@gmail.com','Hi Sara Das Please note that Ticket rised at 09:32:43 2021/09/13 on Water Problem has been Resloved. Happy to Help \\n Thanking you, \\n SuperVisior Team, \\n SkyView24*7','Ticket Solved Confirmation','12:19:45 2021/09/14'),(5,'skyviewproject247@gmail.com','Hi Sara Das Please note that Ticket rised at 20:13:53 2021/09/13 on Payment Problem has been Resloved. Happy to Help \\n Thanking you, \\n SuperVisior Team, \\n SkyView24*7','Ticket Solved Confirmation','12:20:06 2021/09/14'),(6,'skyviewproject247@gmail.com','Hi Sara Das Please note that Ticket rised at 09:14:42 2021/09/14 on Others has been Resloved. Happy to Help \\n Thanking you, \\n SuperVisior Team, \\n SkyView24*7','Ticket Solved Confirmation','12:20:29 2021/09/14'),(7,'skyviewproject247@gmail.com','Hi Sara Das Please note that Ticket rised at 09:14:42 2021/09/14 on Others has been Resloved. Happy to Help \\n Thanking you, \\n SuperVisior Team, \\n SkyView24*7','Ticket Solved Confirmation','12:22:20 2021/09/14'),(8,'skyviewproject247@gmail.com','Medicine Representitve','Test From Frontend','12:31:07 2021/09/14'),(9,'skyviewproject247@gmail.com','This is the Mail Body','Test From Frontend','14:31:19 2021/09/18'),(10,'skyviewproject247@gmail.com','Hi Sara Das Please note that Ticket rised at 16:42:11 2021/09/17 on Payment Problem has been Resloved. Happy to Help \\n Thanking you, \\n SuperVisior Team, \\n SkyView24*7','Ticket Solved Confirmation','16:42:30 2021/09/18');
+INSERT INTO `mail_info` VALUES (1,'skyviewproject247@gmail.com','Hi Bihan,\n Please cleare the rent for this month as well as the payments of the maids within this week \n Thanking you, \n Admin, \n SkyView24*7','Reminder about Payment for August','java.text.SimpleDateFormat@115a0f60'),(2,'skyviewproject247@gmail.com','Hi Abhishek,\n Please cleare the rent for this month as well as the payments of the maids within this week \n Thanking you, \n Admin, \n SkyView24*7','Reminder about Payment for August','java.text.SimpleDateFormat@115a0f60'),(3,'skyviewproject247@gmail.com','Hi Sara Das Please note that Ticket rised at 09:29:58 2021/09/13 on Electricity Problem has been Resloved. Happy to Help \\n Thanking you, \\n SuperVisior Team, \\n SkyView24*7','Ticket Solved Confirmation','12:14:27 2021/09/14'),(4,'skyviewproject247@gmail.com','Hi Sara Das Please note that Ticket rised at 09:32:43 2021/09/13 on Water Problem has been Resloved. Happy to Help \\n Thanking you, \\n SuperVisior Team, \\n SkyView24*7','Ticket Solved Confirmation','12:19:45 2021/09/14'),(5,'skyviewproject247@gmail.com','Hi Sara Das Please note that Ticket rised at 20:13:53 2021/09/13 on Payment Problem has been Resloved. Happy to Help \\n Thanking you, \\n SuperVisior Team, \\n SkyView24*7','Ticket Solved Confirmation','12:20:06 2021/09/14'),(6,'skyviewproject247@gmail.com','Hi Sara Das Please note that Ticket rised at 09:14:42 2021/09/14 on Others has been Resloved. Happy to Help \\n Thanking you, \\n SuperVisior Team, \\n SkyView24*7','Ticket Solved Confirmation','12:20:29 2021/09/14'),(7,'skyviewproject247@gmail.com','Hi Sara Das Please note that Ticket rised at 09:14:42 2021/09/14 on Others has been Resloved. Happy to Help \\n Thanking you, \\n SuperVisior Team, \\n SkyView24*7','Ticket Solved Confirmation','12:22:20 2021/09/14'),(8,'skyviewproject247@gmail.com','Medicine Representitve','Test From Frontend','12:31:07 2021/09/14'),(9,'skyviewproject247@gmail.com','This is the Mail Body','Test From Frontend','14:31:19 2021/09/18'),(10,'skyviewproject247@gmail.com','Hi Sara Das Please note that Ticket rised at 16:42:11 2021/09/17 on Payment Problem has been Resloved. Happy to Help \\n Thanking you, \\n SuperVisior Team, \\n SkyView24*7','Ticket Solved Confirmation','16:42:30 2021/09/18'),(11,'skyviewproject247@gmail.com','This is the Mail Body','From Now','18:43:52 2021/10/06'),(12,'skyviewproject247@gmail.com','Hi Sara Das Please note that Ticket rised at 17:57:51 2021/09/18 on Payment Problem has been Resloved. Happy to Help \\n Thanking you, \\n SuperVisior Team, \\n SkyView24*7','Ticket Solved Confirmation','18:47:16 2021/10/06'),(13,'skyviewproject247@gmail.com','Hi Abhinav Roy Please note that Ticket rised at 18:35:49 2021/10/06 on Payment Problem has been Resloved. Happy to Help \\n Thanking you, \\n SuperVisior Team, \\n SkyView24*7','Ticket Solved Confirmation','18:47:32 2021/10/06');
 /*!40000 ALTER TABLE `mail_info` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -214,11 +239,11 @@ DROP TABLE IF EXISTS `otp_info`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `otp_info` (
   `otp_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `otp_generatedfor` bigint(20) DEFAULT NULL,
   `otp_generatetime` datetime DEFAULT NULL,
   `otp_value` varchar(255) DEFAULT NULL,
+  `otp_generatedfor` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`otp_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -248,7 +273,7 @@ CREATE TABLE `payhistory_info` (
   `payment_userid` bigint(20) DEFAULT NULL,
   `payment_verifiedon` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`payment_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -257,6 +282,7 @@ CREATE TABLE `payhistory_info` (
 
 LOCK TABLES `payhistory_info` WRITE;
 /*!40000 ALTER TABLE `payhistory_info` DISABLE KEYS */;
+INSERT INTO `payhistory_info` VALUES (2,'18:39:38 2021/10/06','UPI PAYMENT',8,'VERIFIED','admin@okhdfc',5000,2,'18:46:15 2021/10/06');
 /*!40000 ALTER TABLE `payhistory_info` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -273,7 +299,7 @@ CREATE TABLE `paymethod_info` (
   `method_name` varchar(255) DEFAULT NULL,
   `payment_userid` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`method_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -282,6 +308,7 @@ CREATE TABLE `paymethod_info` (
 
 LOCK TABLES `paymethod_info` WRITE;
 /*!40000 ALTER TABLE `paymethod_info` DISABLE KEYS */;
+INSERT INTO `paymethod_info` VALUES (6,'name@oksbi','UPI PAYMENT',2);
 /*!40000 ALTER TABLE `paymethod_info` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -302,7 +329,7 @@ CREATE TABLE `ticket_info` (
   `ticket_status` varchar(255) DEFAULT NULL,
   `ticket_topic` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`ticket_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -311,8 +338,33 @@ CREATE TABLE `ticket_info` (
 
 LOCK TABLES `ticket_info` WRITE;
 /*!40000 ALTER TABLE `ticket_info` DISABLE KEYS */;
-INSERT INTO `ticket_info` VALUES (1,'2A','Sara Das','Have done Payment but not verified till Now','16:42:11 2021/09/17','16:42:24 2021/09/18','SOLVED','Payment Problem'),(2,'2A','Sara Das','Have done Payment but not verified till Now','17:57:51 2021/09/18',NULL,'PENDING','Payment Problem');
+INSERT INTO `ticket_info` VALUES (1,'2A','Sara Das','Have done Payment but not verified till Now','16:42:11 2021/09/17','16:42:24 2021/09/18','SOLVED','Payment Problem'),(2,'2A','Sara Das','Have done Payment but not verified till Now','17:57:51 2021/09/18','18:47:12 2021/10/06','SOLVED','Payment Problem'),(3,'1C','Abhinav Roy','Have done Payment but not verified till Now','18:35:49 2021/10/06','18:47:28 2021/10/06','SOLVED','Payment Problem');
 /*!40000 ALTER TABLE `ticket_info` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `todo_info`
+--
+
+DROP TABLE IF EXISTS `todo_info`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `todo_info` (
+  `todo_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `todo_name` varchar(255) DEFAULT NULL,
+  `todo_status` bit(1) DEFAULT NULL,
+  PRIMARY KEY (`todo_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `todo_info`
+--
+
+LOCK TABLES `todo_info` WRITE;
+/*!40000 ALTER TABLE `todo_info` DISABLE KEYS */;
+INSERT INTO `todo_info` VALUES (9,'Flat 6D Clean',_binary '\0'),(10,'Change Light 7C',_binary '');
+/*!40000 ALTER TABLE `todo_info` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -337,7 +389,7 @@ CREATE TABLE `user_info` (
   `user_password` varchar(255) DEFAULT NULL,
   `user_role` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -346,7 +398,7 @@ CREATE TABLE `user_info` (
 
 LOCK TABLES `user_info` WRITE;
 /*!40000 ALTER TABLE `user_info` DISABLE KEYS */;
-INSERT INTO `user_info` VALUES (2,'2A','roy123@gmail.com','Abhinav Roy',_binary '',_binary '',7845963219,28,'1C','Male','Engineer','$2a$12$b61NeHRDqoL5oWCMe7uxRu1dKk08scEgwh9c5q.IJf.tRkCn67JV.','ROLE_RESIDENT'),(4,'8A','chaterjee710@gmail.com','Udita Chaterjee',_binary '',_binary '',8845963214,24,'4B','Female','Doctor','$2a$10$zFGyk.R09WXof5ifwx1Bku3wZ2GU0Pq65ZbS47WuDs46wNoTCrzDS','ROLE_SUPERVISIOR'),(5,'3B','patra263@gmail.com','Abhishek Patra',_binary '',_binary '',8545963214,24,'5C','Male','Engineer','$2a$10$.bIuO.N.YW.EElbOAFGzo.hRuRuT/AQmjDnB6kiJSFdFKwGfMapvq','ROLE_SUPERVISIOR'),(7,'30A','kar123@gmail.com','Anindita Karmakar',_binary '',_binary '',8595923214,39,'9W','Female','Architect','$2a$10$EuE/rl9Rk4J/BqMXqU9dcOTJg/H7RXwdOi71b1H8QUeUlTT.ioeeS','ROLE_ADMIN'),(8,'3L','banerjee503@gmail.com','Ritika Banerjee',_binary '',_binary '',8592923214,24,'30B','Female','Teacher','$2a$10$nkTCiMGIRsF3e6G9ScwMzeGnTGuXNtqRIKY3p5LplbsRHDdu0infO','ROLE_ADMIN'),(10,'85R','layek123@gmail.com','koushik Layek',_binary '',_binary '',9592993314,29,'5L','Male','Engineer','$2a$10$p6RlHVfhTT5gx9mCSQGngO5/uHpY7aJ73ay3SMizFKFjr3yonrzt6','ROLE_RESIDENT'),(12,'6Y','baruna384@gmail.com','Baruna Biswas',_binary '',_binary '',8012365740,39,'15A','Female','Doctor','$2a$10$oBzP6ndY6Gjj4f/CEM4MeOWoORtRIGXIZqYwxAWjIlHxoIrZuS13S','ROLE_RESIDENT'),(15,'2U','infoarpan803@gmail.com','Arpan Mondal',_binary '',_binary '',9601245736,32,'6P','Male','Manager at Infoware','$2a$10$Vj7GmesoYAMaGDaPTV0.Au17F6wVaOxar9pko7W7ec3c4LNhN5ABW','ROLE_SUPERVISIOR');
+INSERT INTO `user_info` VALUES (2,'2A','roy123@gmail.com','Abhinav Roy',_binary '\0',_binary '\0',7845963219,50,'1C','Male','Engineer','$2a$10$Ux120vulVw9CqOJKmPay6egWr/temCTqo/E5RneDoQrkgVGpoMDmO','ROLE_RESIDENT'),(4,'8A','chaterjee710@gmail.com','Udita Chaterjee',_binary '',_binary '',8845963214,24,'4B','Female','Doctor','$2a$10$zFGyk.R09WXof5ifwx1Bku3wZ2GU0Pq65ZbS47WuDs46wNoTCrzDS','ROLE_SUPERVISIOR'),(7,'30A','kar123@gmail.com','Anindita Karmakar',_binary '',_binary '',8595923214,39,'9W','Female','Architect','$2a$10$HcT5ciEaD8o2JsX4c/C8eeSfMhRSIp68JU/gxu.Ki6XOZGmf42TNK','ROLE_ADMIN'),(8,'3L','banerjee503@gmail.com','Ritika Banerjee',_binary '',_binary '',8592923214,24,'30B','Female','Teacher','$2a$10$dH/imjBGF92qo8m3gPli7eT.zZcKfdHXoYK1Q4j6DmVv6TBsNWfIK','ROLE_ADMIN'),(10,'85R','layek123@gmail.com','koushik Layek',_binary '',_binary '',9592993314,29,'5L','Male','Engineer','$2a$10$p6RlHVfhTT5gx9mCSQGngO5/uHpY7aJ73ay3SMizFKFjr3yonrzt6','ROLE_RESIDENT'),(12,'6Y','baruna384@gmail.com','Baruna Biswas',_binary '',_binary '',8012365740,39,'15A','Male','Doctor','$2a$10$A9FKhRFLEj.vFpvYLkqjTuMy7QW4Vz9YeefrK4aemkxrj6U9LAreK','ROLE_RESIDENT'),(15,'2U','infoarpan803@gmail.com','Arpan Mondal',_binary '',_binary '',9601245736,32,'6P','Male','Manager at Infoware','$2a$10$hJFtZpeWVbI9tui.ni6yveOdkZ6Uu2JQOD.CrXPAsjJPpVw1vs9Jy','ROLE_SUPERVISIOR'),(16,'9P','joyee520@gmail.com','Joyee Das',_binary '\0',_binary '\0',9864751202,29,'7Y','Female','Doctor','$2a$10$K.qsw4T4Pi1FPXh6PiYdqehVtMA6DqOMPzwaBYyswMiZE29G0c7rO','ROLE_RESIDENT');
 /*!40000 ALTER TABLE `user_info` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -359,4 +411,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-09-25 12:02:17
+-- Dump completed on 2021-10-21 11:37:59
