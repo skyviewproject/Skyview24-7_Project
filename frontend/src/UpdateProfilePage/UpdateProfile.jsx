@@ -32,7 +32,6 @@ class UpdateProfile extends Component
         this.changeMobileno = this.changeMobileno.bind(this);
         this.changeUserAge = this.changeUserAge.bind(this);
         this.changeUserGender = this.changeUserGender.bind(this);
-        this.changePassword = this.changePassword.bind(this);
         this.changeUserJob = this.changeUserJob.bind(this);
         this.updateUser = this.updateUser.bind(this);
 
@@ -73,7 +72,6 @@ class UpdateProfile extends Component
     changeUsername(event){this.setState({Username: event.target.value});}
     changeEmailId(event){this.setState({Emailid: event.target.value});}
     changeMobileno(event){this.setState({MobileNo: event.target.value});}
-    changePassword(event){this.setState({Password: event.target.value});}
     changeUserAge(event){this.setState({UserAge: event.target.value});}
     changeUserGender(event){this.setState({Gender: event.target.value});}
     changeUserJob(event){this.setState({UserJob: event.target.value});}
@@ -87,15 +85,15 @@ class UpdateProfile extends Component
             "fullName": this.state.Username,
             "emailId": this.state.Emailid,
             "mobileNo": this.state.MobileNo,
-            "userPassword": this.state.Password,
             "userGender": this.state.Gender,
+            "userPassword": this.state.Password,
             "userAge": this.state.UserAge,
             "userOccupation": this.state.UserJob
         }
 
         var regexEmail = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
-        if(this.state.Username == '' || this.state.Emailid == '' || this.state.MobileNo == '' || this.state.Password == '' || this.state.Gender == '' || 
+        if(this.state.Username == '' || this.state.Emailid == '' || this.state.MobileNo == '' || this.state.Gender == '' || 
         this.state.UserAge == '' || this.state.UserJob == '')
         {
             swal({
@@ -128,15 +126,6 @@ class UpdateProfile extends Component
             swal({
                 title: "Wait",
                 text: "Age must be within 1 to 100",
-                icon: "warning",
-              })
-        }
-
-        else if(this.state.Password.length < 5)
-        {
-            swal({
-                title: "Wait",
-                text: "Password Length must be 5 or greater than 5",
                 icon: "warning",
               })
         }
@@ -222,9 +211,6 @@ class UpdateProfile extends Component
 
                                     <label for="usrjb">Your Job: </label><br />
                                     <input type="text" name="usrjb" id="usrjb" onChange={this.changeUserJob} value={this.state.UserJob}/><br />
-
-                                    <label for="pswd">Your Password: </label><br />
-                                    <input type="password" onChange={this.changePassword} id="pswd" name="pswd" required/><br />
 
                                     <label for="role">Role: </label><br />
                                     <select name="role" id="role" value={this.state.UserRole} disabled>

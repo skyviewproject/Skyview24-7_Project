@@ -63,7 +63,7 @@
     border-radius: 50px;
     border: none;
     outline: none;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .wrappervieworaddhelpers .cardholder .card .btnhldr #rest
@@ -86,7 +86,7 @@
     color: #F4511E;
 }
 
-.wrappervieworaddhelpers .cardholder .card .btnhldr #rest:hover
+.wrappervieworaddhelpers .cardholder .card .btnhldr #vwupt:hover
 {
     cursor: pointer;
     margin-left: 23px;

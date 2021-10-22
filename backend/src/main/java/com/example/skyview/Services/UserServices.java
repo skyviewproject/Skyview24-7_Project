@@ -58,7 +58,17 @@ public class UserServices
 		updated.setMobileNo(prev.getMobileNo());
 		updated.setUserAge(prev.getUserAge());
 		updated.setUserOccupation(prev.getUserOccupation());
-		updated.setUserPassword(new BCryptPasswordEncoder().encode(prev.getUserPassword()));
+		
+		Pattern BCRYPT_PATTERN = Pattern.compile("\\A\\$2a?\\$\\d\\d\\$[./0-9A-Za-z]{53}");
+		String stringToCheck = prev.getUserPassword();
+		
+		if (BCRYPT_PATTERN.matcher(stringToCheck).matches()==true) {
+			updated.setUserPassword(prev.getUserPassword());
+		}
+		else
+		{
+			updated.setUserPassword(new BCryptPasswordEncoder().encode(prev.getUserPassword()));
+		}
 		
 		repo1.save(updated);
 		return true;

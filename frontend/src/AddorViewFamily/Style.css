@@ -58,12 +58,12 @@
 .wrapperaddorupdatefamily .cardholder .card .btnhldr button
 {
     color: white;
-    width: 165px;
+    width: 175px;
     height: 45px;
     border-radius: 50px;
     border: none;
     outline: none;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .wrapperaddorupdatefamily .cardholder .card .btnhldr #rest
@@ -89,14 +89,14 @@
 .wrapperaddorupdatefamily .cardholder .card .btnhldr #rest:hover
 {
     cursor: pointer;
-    margin-left: 23px;
+    margin-left: 3px;
     transition: 500ms ease-in-out;
 }
 
 .wrapperaddorupdatefamily .cardholder .card .btnhldr #vwupt:hover
 {
     cursor: pointer;
-   
+    margin-left: 23px;
     transition: 500ms ease-in-out;
 }
 

@@ -89,14 +89,14 @@
 .wrapperaddorviewtickets .cardholder .card .btnhldr #rest:hover
 {
     cursor: pointer;
-    margin-left: 23px;
+    margin-left: 3px;
     transition: 500ms ease-in-out;
 }
 
 .wrapperaddorviewtickets .cardholder .card .btnhldr #vwupt:hover
 {
     cursor: pointer;
-   
+    margin-left: 23px;
     transition: 500ms ease-in-out;
 }
 
