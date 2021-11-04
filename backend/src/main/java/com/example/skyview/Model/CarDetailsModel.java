@@ -34,7 +34,7 @@ public class CarDetailsModel
 	@Column(name="car_brand")
 	private String carBrand;
 	
-	@Column(name="carType")
+	@Column(name="car_Type")
 	private String carType;
 	
 	public long getCarId() {

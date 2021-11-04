@@ -1,0 +1,5 @@
+1. docker run -p 127.0.0.1:3306:3306 --name mysql-server-instance -e MYSQL_ROOT_PASSWORD=mysql@password -e MYSQL_PASSWORD=mysql@password -d mysql:5.6 --default-authentication-plugin=mysql_native_password
+2. docker exec -it  mysql-server-instance bash
+3. docker build . -t springboot-app-in-docker
+4. docker run -p 9000:8082 --name backend-final --link mysql-server-instance:mysql springboot-app-in-docker //in detached mode -d
+5. GRANT ALL PRIVILEGES ON docker_database.* TO 'root'@'mysql-server-instance';

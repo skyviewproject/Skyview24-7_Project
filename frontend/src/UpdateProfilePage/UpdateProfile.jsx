@@ -19,7 +19,7 @@ class UpdateProfile extends Component
             UserRole: '',
             Password: '',
             UserJob: '',
-            Gender: '',
+            Gender: 'Male',
             FlatNo: '',
             BlockNo: '',
             ISActive: false,

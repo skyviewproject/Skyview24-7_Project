@@ -18,7 +18,7 @@ class Signup extends Component
             UserAge: 0,
             Password: '',
             UserJob: '',
-            Gender: '',
+            Gender: 'Male',
         }
 
         this.changeUsername = this.changeUsername.bind(this);
