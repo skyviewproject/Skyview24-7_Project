@@ -31,6 +31,9 @@ public class UserServices
 	@Autowired
 	InvoiceRepo repo7;
 	
+	@Autowired
+	MyUserDetailService Service;
+	
 	public boolean addUser(UserModel user)
 	{
 		user.setUserPassword(new BCryptPasswordEncoder().encode(user.getUserPassword()));
@@ -50,28 +53,37 @@ public class UserServices
 	
 	public boolean updateProfilebyUser(long id, UserModel prev)
 	{
-		UserModel updated = repo1.findById(id).get();
-		
-		updated.setFullName(prev.getFullName());
-		updated.setEmailId(prev.getEmailId());
-		updated.setUserGender(prev.getUserGender());
-		updated.setMobileNo(prev.getMobileNo());
-		updated.setUserAge(prev.getUserAge());
-		updated.setUserOccupation(prev.getUserOccupation());
-		
-		Pattern BCRYPT_PATTERN = Pattern.compile("\\A\\$2a?\\$\\d\\d\\$[./0-9A-Za-z]{53}");
-		String stringToCheck = prev.getUserPassword();
-		
-		if (BCRYPT_PATTERN.matcher(stringToCheck).matches()==true) {
-			updated.setUserPassword(prev.getUserPassword());
+		if(!this.Service.ifUserLoggedIn(id))
+		{
+			return false;
 		}
+		
 		else
 		{
-			updated.setUserPassword(new BCryptPasswordEncoder().encode(prev.getUserPassword()));
+			UserModel updated = repo1.findById(id).get();
+			
+			updated.setFullName(prev.getFullName());
+			updated.setEmailId(prev.getEmailId());
+			updated.setUserGender(prev.getUserGender());
+			updated.setMobileNo(prev.getMobileNo());
+			updated.setUserAge(prev.getUserAge());
+			updated.setUserOccupation(prev.getUserOccupation());
+			
+			Pattern BCRYPT_PATTERN = Pattern.compile("\\A\\$2a?\\$\\d\\d\\$[./0-9A-Za-z]{53}");
+			String stringToCheck = prev.getUserPassword();
+			
+			if (BCRYPT_PATTERN.matcher(stringToCheck).matches()==true) {
+				updated.setUserPassword(prev.getUserPassword());
+			}
+			else
+			{
+				updated.setUserPassword(new BCryptPasswordEncoder().encode(prev.getUserPassword()));
+			}
+			
+			
+			repo1.save(updated);
+			return true;
 		}
-		
-		repo1.save(updated);
-		return true;
 	}
 	
 	public boolean updateProfilebyAdmin(long id, UserModel prev)

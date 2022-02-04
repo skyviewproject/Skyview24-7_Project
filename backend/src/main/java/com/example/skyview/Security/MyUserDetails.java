@@ -12,6 +12,7 @@ import com.example.skyview.Model.UserModel;
 
 public class  MyUserDetails implements UserDetails
 {
+	private long UUID;
 	private String emailID;
 	private String password;
 	private boolean isNonExp;
@@ -20,6 +21,7 @@ public class  MyUserDetails implements UserDetails
 	
 	public MyUserDetails(UserModel user) 
     {
+		this.UUID = user.getuId();
        this.emailID = user.getEmailId();
        this.password = user.getUserPassword();
        this.isNonExp = user.isActive();
@@ -68,6 +70,11 @@ public class  MyUserDetails implements UserDetails
 	public boolean isEnabled() 
 	{
 		return isVefd;
+	}
+
+	public long getUUID() 
+	{
+		return this.UUID;
 	}
 	
 }

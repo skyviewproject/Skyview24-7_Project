@@ -45,6 +45,11 @@ public class FamilyMembersController
 			return ("Family Members details has been Updated Successfully");
 		}
 		
+		else if(ret==false)
+		{
+			return ("Not Allowed");
+		}
+		
 		else
 		{
 			return ("Opps Something Wrong happened");

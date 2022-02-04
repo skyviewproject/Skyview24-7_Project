@@ -63,6 +63,11 @@ public class UserController
 			return ("Your Profile has been Updated Successfully");
 		}
 		
+		else if(ret==false)
+		{
+			return ("Not Allowed");
+		}
+		
 		else
 		{
 			return ("Opps Something Wrong happened");

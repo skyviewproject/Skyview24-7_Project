@@ -11,6 +11,9 @@ public class FamilyMembersServices
 	@Autowired
 	FamilyMembersRepo repo;
 	
+	@Autowired
+	MyUserDetailService Service;
+	
 	public boolean addFamilyMember(FamilyMembersModel user)
 	{
 		repo.save(user);
@@ -29,6 +32,12 @@ public class FamilyMembersServices
 
 	public FamilyMembersModel findFamilyMemberbyId(long id) 
 	{
+		FamilyMembersModel member = repo.findById(id).get();	
+		if(!this.Service.ifUserLoggedIn(member.getOwnerId()))
+		{
+			return new FamilyMembersModel();
+		}
+		
 		return repo.findById(id).get();
 	}
 	
@@ -36,19 +45,32 @@ public class FamilyMembersServices
 	{
 		FamilyMembersModel updated = repo.findById(id).get();
 		
-		updated.setEmailId(prev.getEmailId());
-		updated.setMobileNo(prev.getMobileNo());
-		updated.setRelation(prev.getRelation());
-		updated.setMemberName(prev.getMemberName());
-		updated.setMemberAge(prev.getMemberAge());
+		if(!this.Service.ifUserLoggedIn(updated.getOwnerId()))
+		{
+			return false;
+		}
 		
-		repo.save(updated);
-		return true;
+		else
+		{
+			updated.setEmailId(prev.getEmailId());
+			updated.setMobileNo(prev.getMobileNo());
+			updated.setRelation(prev.getRelation());
+			updated.setMemberName(prev.getMemberName());
+			updated.setMemberAge(prev.getMemberAge());
+			
+			repo.save(updated);
+			return true;
+		}
 	}
 	
 	
 	public boolean deleteFamilyMember(long id)
 	{
+		FamilyMembersModel member = repo.findById(id).get();	
+		if(!this.Service.ifUserLoggedIn(member.getOwnerId()))
+		{
+			return false;
+		}
 		repo.deleteById(id);
 		return true;
 	}

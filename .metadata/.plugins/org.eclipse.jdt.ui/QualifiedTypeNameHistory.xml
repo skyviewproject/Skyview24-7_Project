@@ -39,4 +39,6 @@
     <fullyQualifiedTypeName name="com.example.skyview.Model.IncomeModel"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PutMapping"/>
     <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="org.springframework.security.core.Authentication"/>
+    <fullyQualifiedTypeName name="org.springframework.security.core.context.SecurityContextHolder"/>
 </qualifiedTypeNameHistroy>

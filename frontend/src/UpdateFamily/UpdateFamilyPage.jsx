@@ -34,15 +34,23 @@ class UpdateFamilyPage extends Component
         const api = new backEnd();
         api.getFamilyDetails(this.state.id).then((res) =>
         {
-            this.setState(
-                {
-                    memberName: res.data.memberName,
-                    memberAge: res.data.memberAge,
-                    emailId: res.data.emailId,
-                    mobileNo: res.data.mobileNo,
-                    relation: res.data.relation,
-                }
-            );
+            if(res.data.ownerId == 0)
+            {
+                window.location.href = "/unauthorized";
+            }
+
+            else
+            {
+                this.setState(
+                    {
+                        memberName: res.data.memberName,
+                        memberAge: res.data.memberAge,
+                        emailId: res.data.emailId,
+                        mobileNo: res.data.mobileNo,
+                        relation: res.data.relation,
+                    }
+                );
+            }
         })
     }
     changemembername(event){this.setState({memberName: event.target.value});}
@@ -131,25 +139,31 @@ class UpdateFamilyPage extends Component
                 api.updateMyFamilyDetails(this.state.id, Updatemember).then((res) =>
                 {
                     console.log(res.status);
-                    if(res.status == 200)
+                    if(res.data == "Family Members details has been Updated Successfully")
                     {
                         swal("New Family added Successfully!", {
                             icon: "success",
                           });
                           
-                        window.location.href = "/myfamilymembers";
+                        //window.location.href = "/myfamilymembers";
+                    }
+
+                    else if(res.data == "Not Allowed")
+                    {
+                        swal({
+                            title: "Error",
+                            text: "Don't Try To Do This Again",
+                            icon: "error",
+                        });
                     }
                 })
                 .catch((error) =>
                 {
-                    if(error != undefined)
-                    {
-                        swal({
-                            title: "Error",
-                            text: `${error}`,
-                            icon: "error",
-                        });
-                    }
+                    swal({
+                        title: "Error",
+                        text: `${error}`,
+                        icon: "error",
+                    });
                 })
             } else {
               swal("Updating Member Aborted!");

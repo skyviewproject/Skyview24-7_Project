@@ -145,13 +145,22 @@ class UpdateProfile extends Component
                     api.updateProfile(this.state.UserId, updatedUser).then((res) =>
                     {
                         console.log(res.status);
-                        if(res.status == 200)
+                        if(res.data == "Your Profile has been Updated Successfully")
                         {
                             swal("Profile Updated Successfully!", {
                                 icon: "success",
                               });
                               
                             window.location.href = "/myprofile";
+                        }
+
+                        else if(res.data == "Not Allowed")
+                        {
+                            swal({
+                                title: "Error",
+                                text: "Don't Try To Do This Again",
+                                icon: "error",
+                            });
                         }
                     })
                     .catch((error) =>

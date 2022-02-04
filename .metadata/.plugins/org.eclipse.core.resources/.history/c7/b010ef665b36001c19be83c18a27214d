@@ -1,4 +1,0 @@
-FROM openjdk:11
-EXPOSE 8085
-ADD target/Skyview24*7-Backend.jar Skyview24*7-Backend.jar 
-ENTRYPOINT ["java","-jar","/Skyview24*7-Backend.jar"]

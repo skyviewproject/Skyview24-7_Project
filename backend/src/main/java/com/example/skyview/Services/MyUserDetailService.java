@@ -1,8 +1,10 @@
 package com.example.skyview.Services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -36,6 +38,23 @@ public class MyUserDetailService implements UserDetailsService
 	{
 		return repo.findMyUserIdandRole(emailId);
 	}
+	
+	 public boolean ifUserLoggedIn(long requested)
+     {
+        boolean ret = false;
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        String s = repo.findMyUserIdandRole(String.valueOf(auth.getPrincipal()));
+        String a[] = s.split(",");
+        long active = Long.parseLong(a[0]);
+        //System.out.println(requested + " " + active);
+        
+        if(requested == active)
+        {
+            ret = true;
+        }
+
+        return ret;
+     }
 	
 	public boolean IsUserPresent(String emailId)
 	{
